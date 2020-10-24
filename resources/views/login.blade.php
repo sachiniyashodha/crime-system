@@ -1,5 +1,5 @@
-@extends('layouts.header')
-
+@extends('layouts.main')
+@section('content')
     <div class="container">
         <h1 class="text-center">Crime Management system</h1>
     </div>
@@ -22,4 +22,4 @@
             </form>
         </div>
     </div>
-@extends('layouts.footer')
+@endsection

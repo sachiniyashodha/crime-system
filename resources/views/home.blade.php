@@ -1,23 +1,33 @@
-@extends('layouts.app')
-
+@extends('layouts.main')
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+    <div class="jumbotron hero-technology">
+        <h1 class="hero-title"><strong>CRIME MANAGEMENT SYSTEM</strong></h1>
+        <p class="text-muted"><a class="btn btn-primary btn-lg hero-button" role="button" href="main.html">ENTER TO DATABASE</a></p>
+        <div class="col-md-4">
+            <h2>Speeds up Real Time Crime Traking. </h2></div>
+        <div class="col-md-4">
+            <h2>User Experience Focused. </h2></div>
+        <div class="col-md-4">
+            <h2>Easy to work with Database. </h2></div>
     </div>
-</div>
+    <div class="col-md-7">
+        <h1 class="text-center">ABOUT US</h1>
+        <p>Crime management system for Puttalam police district. Initially, it focuses on Puttalam district area police stations to formulate a method for supportingactivities in the police department. The police offices can be used this web-based solution
+            in addition to their manual process. Then, his project aims to automate the current process. </p>
+        <p>Crime management system for Puttalam police district. Initially, it focuses on Puttalam district area police stations to formulate a method for supportingactivities in the police department. The police offices can be used this web-based solution
+            in addition to their manual process. Then, his project aims to automate the current process. </p>
+        <p>Crime management system for Puttalam police district. Initially, it focuses on Puttalam district area police stations to formulate a method for supportingactivities in the police department. The police offices can be used this web-based solution
+            in addition to their manual process. Then, his project aims to automate the current process. </p>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        <h1 class="text-center">Police News</h1><img src="assets/img/criminalimg.png">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer>Someone famous</footer>
+        </blockquote>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer>Someone famous</footer>
+        </blockquote>
+    </div>
 @endsection
