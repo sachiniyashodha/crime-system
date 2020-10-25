@@ -4,7 +4,7 @@
         <h1 class="text-center">Crime Management system</h1>
     </div>
     <div class="col-md-12">
-        <div class="login-card"><img src="assets/img/login.png" class="profile-img-card">
+        <div class="login-card"><img src="{{ asset('img/login.png') }}" class="profile-img-card">
             <p class="profile-name-card">ADMIN ONLY</p>
             <span class="reauth-email"> Enter your user name and password.</span>
             <form class="form-signin">
