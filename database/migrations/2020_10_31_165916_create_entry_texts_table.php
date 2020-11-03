@@ -14,7 +14,14 @@ class CreateEntryTextsTable extends Migration
     public function up()
     {
         Schema::create('entry_texts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('entry_id');
+            $table->string('reference_no');
+            $table->string('branch_name');
+            $table->string('date');
+            $table->string('time');
+            $table->string('fir_id');
+            $table->string('police_entry');
+            $table->string('other_details');
             $table->timestamps();
         });
     }

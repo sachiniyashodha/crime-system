@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class login extends Model
+class user_login extends Model
 {
     protected $fillable = [
         'login_id',
@@ -12,5 +12,4 @@ class login extends Model
         'pass_word',
         'frogot_pass',
     ];
-
 }

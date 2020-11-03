@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSectionOfLowsTable extends Migration
+class CreateUserLoginsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSectionOfLowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('section_of_lows', function (Blueprint $table) {
-            $table->increments('section_id');
-            $table->string('section_of_low');
-            $table->string('sentence');
-            $table->string('detail');
+        Schema::create('user_logins', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('user_name');
+            $table->string('pass_word');
+            $table->string('frogot_pass');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateSectionOfLowsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('section_of_lows');
+        Schema::dropIfExists('user_logins');
     }
 }

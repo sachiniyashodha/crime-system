@@ -14,7 +14,11 @@ class CreateCaseOutcomesTable extends Migration
     public function up()
     {
         Schema::create('case_outcomes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('case_outcome_id');
+            $table->string('case_id');
+            $table->string('section_of_low_id');
+            $table->string('deatails');
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -14,8 +14,15 @@ class CreateAdminFormsTable extends Migration
     public function up()
     {
         Schema::create('admin_forms', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->increments('admin_id');
+            $table->string('officer_id');
+            $table->string('officer_name');
+            $table->string('rank');
+            $table->string('dob');
+            $table->string('address');
+            $table->string('contact_no');
+            $table->string('gender');
+             $table->timestamps();
         });
     }
 

@@ -14,7 +14,11 @@ class CreateInvestigationsTable extends Migration
     public function up()
     {
         Schema::create('investigations', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('investigation_id');
+            $table->string('case_id');
+            $table->string('officer_fullname');
+            $table->string('date_start');
+            $table->string('date_end');
             $table->timestamps();
         });
     }
