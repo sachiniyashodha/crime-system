@@ -9,7 +9,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Crime Management System') }}</title>
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,34 +22,18 @@
     </head>
     <body>
         <header>
-{{--            <nav class="navbar navbar-default">--}}
-{{--                <div class="container-fluid">--}}
-
-{{--                    <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Refresh </a>--}}
-{{--                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>--}}
-{{--                    </div>--}}
-{{--                    <div class="collapse navbar-collapse" id="navcol-1">--}}
-{{--                        <ul class="nav navbar-nav navbar-right">--}}
-{{--                            <li role="presentation"><a href="home.html">Home </a></li>--}}
-{{--                            <li role="presentation"><a href="main.html">Main </a></li>--}}
-{{--                            <li role="presentation"><a href="add_data.html">Add Data</a></li>--}}
-{{--                            <li role="presentation"><a href="row_data.html">Row Data</a></li>--}}
-{{--                            <li role="presentation"><a href="administratr.html">Administratr </a></li>--}}
-{{--                            <li role="presentation"><a href="index.html">Logout </a></li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </nav>--}}
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Refersh </a>
-                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+                    <div class="navbar-header">
+                        <a class="navbar-brand navbar-link" href="home.html">Home </a>
+                        <a class="navbar-brand navbar-link" href="main.html">Main </a>
+                        <a class="navbar-brand navbar-link" href="add_data.html">Add Data</a>
+                        <a class="navbar-brand navbar-link" href="row_data.html">Row Data</a>
+                        <a class="navbar-brand navbar-link" href="administratr.html">Administratr </a>
+                        <a class="navbar-brand navbar-link" href="index.html">Logout </a>
                     </div>
-                    <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li role="presentation"><a href="index.html">LogOut </a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </nav>
         </header>
@@ -64,8 +48,8 @@
             <h4 class="text-center"> </h4>
         </footer>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     </body>

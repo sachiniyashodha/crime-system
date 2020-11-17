@@ -18,5 +18,7 @@ class petitioner extends Model
         'officer_id',
         'officer_name',
         'date_of_hair',
+        'created_at',
+        'updated_at'
     ];
 }

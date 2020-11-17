@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
 
@@ -35,9 +31,15 @@ Route::get('/add_admin', function () {
     return view('add_admin');
 });
 
-Route::get('/add_data', function () {
-    return view('add_data');
-});
+Route::get('/login', function () {return view('login'); });
+
+Route::post('/login/store', 'LoginController@store')->name('login');
+
+Route::get('/add_data', function () { return view('add_data'); });
+
+Route::post('/add_data/store', 'EntryTextController@store')->name('add_data');
+
+
 
 Route::get('/administratr', function () {
     return view('administratr');
@@ -91,8 +93,8 @@ Route::get('/r_fir', function () {
     return view('r_fir');
 });
 
-Route::get('/r_investigation', function () {
-    return view('r_investigation');
+Route::get('/investigate', function () {
+    return view('investigate');
 });
 
 Route::get('/r_section_of_low', function () {
@@ -119,17 +121,14 @@ Route::get('/wornted_person', function () {
     return view('wornted_person');
 });
 
-
-
-
 Route::get('/main', function () {
     return view('main');
 });
 
 
-//Route::get('/home', 'HomeController@index')->name('home');
 
-// Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
