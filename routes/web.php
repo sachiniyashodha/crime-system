@@ -33,17 +33,24 @@ Route::get('/add_admin', function () {
 
 Route::get('/login', function () {return view('login'); });
 
-Route::post('/login/store', 'LoginController@store')->name('login');
+Route::post('/login', 'Auth\LoginController@store')->name('login');
+
+
+Route::get('/register', function () {return view('register'); });
+
+Route::post('/create', 'Auth\RegisterController@store')->name('register');
+
 
 Route::get('/add_data', function () { return view('add_data'); });
 
-Route::post('/add_data/store', 'EntryTextController@store')->name('add_data');
+Route::post('/add_data/store', 'EntryTextController@store')->name('petitioner_form');
 
 
+Route::get('/administratr', function () { return view('administratr');});
 
-Route::get('/administratr', function () {
-    return view('administratr');
-});
+Route::post('/administratr/store', 'AdminFormController@store')->name('administratr');
+
+
 
 Route::get('/avalability', function () {
     return view('avalability');

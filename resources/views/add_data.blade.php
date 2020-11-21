@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row ">
             <div class="col-md-12 bg-white">
-            <form class="form-horizontal custom-form" method="POST" action="{{ route('add_data') }}">
+            <form class="form-horizontal custom-form" method="POST" action="{{ route('petitioner_form') }}">
                 {{ csrf_field() }}
 
                     <h1>Petitioner Form</h1>

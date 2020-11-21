@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\admin_form;
+use App\petitioner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class AdminFormController extends Controller
 {
@@ -35,7 +37,33 @@ class AdminFormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $add_data = Validator::make(request()->all(),[
+            'admin_id'     => 'required',
+            'officer_id'   => 'required|string|max:250',
+            'officer_name' => 'required|string|max:250',
+            'rank'         => 'required|string|max:250',
+            'dob'          => 'nullable|max:15|string',
+            'address'      => 'required|string|max:250',
+            'contact_no'   => 'required|string|max:250',
+            'gender'       => 'required|string|max:250',
+        ]);
+
+        if($add_data->fails()){
+            $add_data->errors()->add('from', 'ADD');
+        }else{
+            $toInsert = [  //Todo : Get the Confirmation for validations
+                'admin_id'     => request()->has( 'admin_id'    )? request( 'admin_id'    ) : null,
+                'officer_id'   => request()->has( 'officer_id'  )? request( 'officer_id'  ) : null,
+                'officer_name' => request()->has( 'officer_name')? request( 'officer_name') : null,
+                'rank'         => request()->has( 'rank'        )? request( 'rank'        ) : null,
+                'dob'          => request()->has( 'dob'         )? request( 'dob'         ) : null,
+                'address'      => request()->has( 'address'     )? request( 'address'     ) : null,
+                'contact_no'   => request()->has( 'contact_no'  )? request( 'contact_no'  ) : null,
+                'gender'       => request()->has( 'gender'      )? request( 'gender'      ) : null
+            ];
+            petitioner::create($toInsert);
+        }
+        return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**
