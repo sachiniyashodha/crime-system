@@ -4,99 +4,92 @@
         <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal custom-form">
                 <h1>Fir Form</h1>
-                <div class="form-group">
+                
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Fir Number : </label>
+                        <label class="control-label" for="name-input-field">Fir Number : </label><br>
+                        <input class="form-control" type="number" name="fir_no">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="number">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Accused ID:</label>
+                        <label class="control-label" for="name-input-field">Accused ID:</label><br>
+                        <input class="form-control" type="text" name="accused_id">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="number">
-                    </div>
+                   
                 </div>
-                <div class="form-group"></div>
-                <div class="form-group">
+
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field"> Victim ID : </label>
+                        <label class="control-label" for="name-input-field"> Victim ID : </label><br>
+                        <input class="form-control" type="text" name="victim_id">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Petitiioner ID : </label>
+                        <label class="control-label" for="name-input-field">Petitiioner ID : </label><br>
+                        <input class="form-control" type="text" name="petitioner_id">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Place of Incident : </label>
+                        <label class="control-label" for="name-input-field">Place of Incident : </label><br>
+                        <input class="form-control" type="text" name="place_of_incident">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Date of Incident : </label>
+                        <label class="control-label" for="name-input-field">Date of Incident : </label><br>
+                        <input class="form-control" type="date" name="date_of_incident">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="date">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Time of Incident : </label>
+                        <label class="control-label" for="name-input-field">Time of Incident : </label><br>
+                        <input class="form-control" type="time" name="time_of_incident">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="time" />
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Date Filr : </label>
+                        <label class="control-label" for="name-input-field">Date Filr : </label><br>
+                        <input class="form-control" type="date" name="date_filr">
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="date">
-                    </div>
+                    
                 </div>
-                <div class="form-group"></div>
-                <div class="radio">
-                    <label> </label>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-4 label-column">
-                        <label class="control-label" for="pawssword-input-field">Accused Status : </label>
-                    </div>
-                    <div class="col-sm-4 label-column">
-                        <div class="form-group has-success">
-                            <div class="radio">
-                                <label class="control-label">
-                                    <input type="radio" name="radio-group"> Proved</label>
-                            </div>
-                            <div class="radio">
-                                <label class="control-label">
-                                    <input type="radio" name="radio-group" checked=""> Not Proved</label>
+                
+                <div class="col-sm-4 label-column">
+                            <label class="control-label" for="name-input-field">Accused Status</label><br>
+                            <select class="custom-select" id="accused_status" name="accused_status">
+                                <option selected>Choose...</option>
+                                <option value="male">proved</option>
+                                <option value="female">not_proved</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                I've read and accept the terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group has-warning"></div>
-                <div class="form-group"></div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">I've read and accept the terms and conditions</label>
-                </div>
-                <button class="btn btn-default submit-button" type="button">Submit Form</button>
+                    <div class="form-row">
+                    <button class="btn btn-primary" onclick="submit('submit')">Submit</button>
+                    <button class="btn btn-primary" onclick="clear('clear')">Clear</button>
+                    <button class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
+                    </div>
+
+                    </div>
+                    
             </form>
         </div>
     </div>

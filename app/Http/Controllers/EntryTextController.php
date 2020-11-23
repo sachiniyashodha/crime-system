@@ -72,7 +72,8 @@ class EntryTextController extends Controller
             petitioner::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("added successfully!");
-//        dd($add_data);
+        // $add_data = request()->all();
+    //    dd($add_data);
 //        echo "hello world";
     }
 

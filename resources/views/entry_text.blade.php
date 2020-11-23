@@ -4,69 +4,83 @@
         <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal custom-form">
                 <h1>ENTRY (text) Form</h1>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Reference No: </label>
+                        <label class="control-label" for="name-input-field">Entry ID: </label><br>
+                        <input class="form-control" type="text" name="entry_id" require>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Branch Name:</label>
+                        <label class="control-label" for="name-input-field">Reference No: </label><br>
+                        <input class="form-control" type="text" name="reference_no" require>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Date </label>
+                        <label class="control-label" for="name-input-field">Branch Name:</label><br>
+                        <input class="form-control" type="text" name="branch_name" require>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="date">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Time </label>
+                        <label class="control-label" for="name-input-field">Date : </label><br>
+                        <input class="form-control" type="date" name="date" require>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="time" />
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Petitioner ID : </label>
+                        <label class="control-label" for="name-input-field">Time : </label><br>
+                        <input class="form-control" type="time" name="branch_name" require>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Police Entry Text: </label>
+                        <label class="control-label" for="name-input-field">Fir ID : </label><br>
+                        <input class="form-control" type="text" name="fir_id" require>
                     </div>
-                    <div class="col-sm-6 input-column">
-                        <textarea class="form-control"></textarea>
-                    </div>
+                   
                 </div>
-                <div class="form-group"></div>
-                <div class="form-group">
-                    <label class="control-label" for="file-input">Other Details</label>
-                    <input type="file" name="file-input" id="file-input">
+                <div class="form-row">
+                    <div class="col-sm-4 label-column">
+                        <label class="control-label" for="name-input-field">Police Entry Text: </label><br>
+                        <textarea class="form-control" name="police_entry"></textarea>
+                    </div>
+                    
+                </div>
+                
+                <div class="form-row">
+                    <label class="control-label" for="file-input">Other Details</label><br>
+                    <input class="form-control" type="text" name="other_details" require>
                 </div>
                 <div class="radio">
                     <label> </label>
                 </div>
-                <div class="form-group has-warning"></div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">I've read and accept the terms and conditions</label>
-                </div>
-                <div class="form-group"></div>
-                <button class="btn btn-default submit-button" type="button">Submit Entry Form</button>
+                <div class="form-row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                I've read and accept the terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                    <button class="btn btn-primary" onclick="submit('submit')">Submit</button>
+                    <button class="btn btn-primary" onclick="clear('clear')">Clear</button>
+                    <button class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
+                    </div>
+
+                    </div>
+
             </form>
         </div>
     </div>

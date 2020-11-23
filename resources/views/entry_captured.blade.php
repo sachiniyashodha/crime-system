@@ -7,6 +7,7 @@
                 <div class="form-group">
                     <div class="col-sm-4 label-column">
                         <label class="control-label" for="name-input-field">Reference No: </label>
+                        <input class="form-control" type="text" name="reference_no" require>
                     </div>
                     <div class="col-sm-6 input-column">
                         <input class="form-control" type="text">
@@ -19,8 +20,16 @@
                 </div>
                 <div class="form-group has-warning"></div>
                 <div class="form-group"></div><a class="btn btn-default submit-button" role="button" href="police_entry.html">Back To Entry Page</a></form>
+       
+                <div class="form-row">
+                <button class="btn btn-primary" onclick="submit('submit')">Submit</button>
+                    <button class="btn btn-primary" onclick="clear('clear')">Clear</button>
+                    <button class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
+                    </div>
+       
         </div>
     </div>
+    </form>
     
  @endsection
 

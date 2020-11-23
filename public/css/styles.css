@@ -144,10 +144,10 @@ div.col-md-15{
   background-color:#ffffff;
 }
 
-label{
+/* label{
   text-align:right;
   color:#000000;
-}
+} */
 
 
 div.progress{
@@ -174,11 +174,11 @@ a.blockquote{
   background-image:url('../img/adminlogin.jpg');
 }
 
-label{
+/* label{
   font-size:20PX;
   text-align:center;
   font-style:initial;
- }
+ } */
 
 label.control-label{
   font:initial;
