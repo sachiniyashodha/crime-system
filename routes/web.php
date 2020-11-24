@@ -47,6 +47,7 @@ Route::get('/add_data', 'EntryTextController@show');
 
 Route::post('/add_data/store', 'EntryTextController@store')->name('petitioner_form');
 
+Route::post('/add_data/delete', 'EntryTextController@delete')->name('delete_petitioner');
 
 Route::get('/administratr', function () { return view('administratr');});
 

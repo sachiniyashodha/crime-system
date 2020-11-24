@@ -121,8 +121,11 @@ class EntryTextController extends Controller
      * @param  \App\entry_text  $entry_text
      * @return \Illuminate\Http\Response
      */
-    public function destroy(entry_text $entry_text)
+    public function destroy()
     {
-        //
+        $id = request('delete_petitioner_id');
+        petitioner::where('petitioner_id', $id)->delete();
+
+        return redirect()->back();
     }
 }
