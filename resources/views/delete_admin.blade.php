@@ -41,22 +41,28 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="btn-toolbar">
-                    <div class="btn-group" role="group"></div>
-                    <div class="btn-group btn-group-lg" role="group"></div>
+                <div class="form-group row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label text-left" for="invalidCheck">
+                            I've read and accept the terms and conditions
+                        </label>
+                        <div class="invalid-feedback text-left">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="form-group"></div>
-                <div class="radio">
-                    <label> </label>
+                <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6">
+                   <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
+                    <button type="button" class="btn btn-primary" onclick="update('update')">Update</button>
+                    <button type="button" class="btn btn-primary" onclick="clear('clear')">Clear</button>
                 </div>
-                <div class="form-group has-warning"></div>
-                <div class="form-group"></div>
-                <button class="btn btn-default submit-button" type="button">Delete </button>
-                <button class="btn btn-default submit-button" type="button">Update </button>
-                <button class="btn btn-default submit-button" type="button">Clear </button>
+                    
             </form>
         </div>
     </div>

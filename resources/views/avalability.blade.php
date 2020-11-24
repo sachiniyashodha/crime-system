@@ -3,7 +3,7 @@
     <div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal custom-form">
-                <h1> Person Avalability.</h1>
+                <h1> Person Avalability.</h1><br>
                 <label for="search-input">Enter Reference Number :</label>
                 <div class="form-group has-error has-feedback">
                     <div class="input-group">

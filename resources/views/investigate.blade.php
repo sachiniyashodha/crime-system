@@ -72,6 +72,8 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6">
                    <button type="button" class="btn btn-primary" onclick="submit('submit')">Submit</button>
                     <button type="button" class="btn btn-primary" onclick="clear('clear')">Clear</button>
                     <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
