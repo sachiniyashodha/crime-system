@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
 
 Route::get('/goal', function () {
-    return view('goal');
+    return view('main');
 });
 
 Route::get('/police_entry', function () {
@@ -31,9 +31,9 @@ Route::get('/add_admin', function () {
     return view('add_admin');
 });
 
-Route::get('/login', function () {return view('login'); });
-
-Route::post('/login', 'Auth\LoginController@store')->name('login');
+//Route::get('/login', function () {return view('login'); });
+//
+//Route::post('/login', 'Auth\LoginController@store')->name('login');
 
 
 Route::get('/register', function () {return view('register'); });
@@ -41,7 +41,9 @@ Route::get('/register', function () {return view('register'); });
 Route::post('/create', 'Auth\RegisterController@store')->name('register');
 
 
-Route::get('/add_data', function () { return view('add_data'); });
+//Route::get('/add_data', function () { return view('add_data'); });
+
+Route::get('/add_data', 'EntryTextController@show');
 
 Route::post('/add_data/store', 'EntryTextController@store')->name('petitioner_form');
 

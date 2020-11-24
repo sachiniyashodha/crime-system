@@ -15,10 +15,10 @@ class EntryTextController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+//    public function index()
+//    {
+//        //
+//    }
 
     /**
      * Show the form for creating a new resource.
@@ -46,7 +46,7 @@ class EntryTextController extends Controller
                 'contact_no'        => 'nullable|max:15|string',
                 'canplan'           => 'required|string|max:250',
                 'gender'            => 'required|string|max:250',
-                'details'           => 'required|string|max:250',
+                'details'           => '',
                 'officer_id'        => 'required',
                 'officer_name'      => 'required|string|max:250',
                 'dob'               => 'required|string|max:250',
@@ -72,8 +72,8 @@ class EntryTextController extends Controller
             petitioner::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("added successfully!");
-        // $add_data = request()->all();
-    //    dd($add_data);
+//         $add_data = request()->all();
+//        dd($add_data);
 //        echo "hello world";
     }
 
@@ -81,10 +81,14 @@ class EntryTextController extends Controller
      * Display the specified resource.
      *
      * @param  \App\entry_text  $entry_text
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory
      */
-    public function show(entry_text $entry_text)
+    public function show()
     {
+        $petitionerdata = petitioner::all();
+            return view('add_data', [
+                'petitionerdata' => $petitionerdata,
+            ]);
 
     }
 

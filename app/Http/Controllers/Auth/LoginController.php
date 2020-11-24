@@ -49,15 +49,15 @@ class LoginController extends Controller
 
 //        $add_data = request()->all();
 //        dd($add_data);
-        if(Auth::attempt(['email' => request()->email, 'password' => request()->password])){
-            $user = Auth::user();
-            $success['token'] =  $user->createToken(env('APP_KEY'))-> accessToken;
-            $success['user'] =  $user;
-
-            return $this->sendResponse($success, 'User login successfully.');
-        }
-        else{
-            return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
-        }
+//        if(Auth::attempt(['email' => request()->email, 'password' => request()->password])){
+//            $user = Auth::user();
+//            $success['token'] =  $user->createToken(env('APP_KEY'))-> accessToken;
+//            $success['user'] =  $user;
+//
+//            return $this->sendResponse($success, 'User login successfully.');
+//        }
+//        else{
+//            return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+//        }
     }
 }
