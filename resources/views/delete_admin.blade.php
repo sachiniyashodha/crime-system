@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
     <div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
