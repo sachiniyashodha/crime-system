@@ -13,7 +13,9 @@
                         </div>
                         <div class="card-body pt-5 ">
 
-                    <form class="form-horizontal custom-form" method="POST" action="{{ route('admin_forms') }}">
+                    <form class="form-horizontal custom-form" >
+
+{{--                        method="POST" action="{{ route('admin_forms') }}"--}}
                     {{ csrf_field() }}
                     <div class="row">
                     <div class="col-md-12">
@@ -167,7 +169,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form name="delete_admin_forms" method="POST" action="{{ route('delete_admin_forms') }}">
+                <form name="delete_admin_forms" >
+{{--                    method="POST" action="{{ route('delete_admin_forms') }}"--}}
                     {{ csrf_field() }}
                     <input type="hidden" name="delete_petitioner_id" id="delete_admin_id" >
                     <div class="modal-body">
