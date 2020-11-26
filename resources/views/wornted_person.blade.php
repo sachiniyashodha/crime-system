@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
 <div class="content">
         <div class="container-fluid">
@@ -12,7 +12,8 @@
                         </div>
                         <div class="card-body pt-5 ">
 
-                    <form class="form-horizontal custom-form" method="POST" action="{{ route('wornted_person_form') }}">
+                    <form class="form-horizontal custom-form" >
+{{--                        method="POST" action="{{ route('wornted_person_form') }}"--}}
                     {{ csrf_field() }}
                     <div class="row">
                     <div class="col-md-12">
