@@ -3,7 +3,17 @@
     <div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal custom-form">
-                <h1>Admin Table</h1>
+                <h1>Admin Table</h1><br>
+                <label for="search-input">Enter ID Number :</label>
+                <div class="form-group has-error has-feedback">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
+                        <input class="form-control" type="search" name="search" id="search-input">
+                    </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i></div>
+                <div class="form-group">
+                    <div class="col-sm-12 label-column">
+                        <header></header>
+                        <h4>Check Officer Avalability. </h4></div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>

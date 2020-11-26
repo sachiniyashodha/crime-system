@@ -1,10 +1,23 @@
 @extends('layouts.main')
 @section('content')
-<div class="row register-form">
-        <div class="col-md-8 mx-auto">
-            <form class="form-horizontal custom-form" method="post" action="">
-                <h1>wornted_person</h1>
+<div class="content">
+        <div class="container-fluid">
 
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>Wornted Person Form </strong></h2>
+                        </div>
+                        <div class="card-body pt-5 ">
+
+                    <form class="form-horizontal custom-form" method="POST" action="{{ route('wornted_person_form') }}">
+                    {{ csrf_field() }}
+                    <div class="row">
+                    <div class="col-md-12">
+                    <div class="form-group row">
+                    <div class="col-sm-4 label-column text-right">
             <div class="form-group row">
                     <div class="col-sm-4 label-column text-right">
                         <label class="control-label" for="name-input-field">Person Name : </label>

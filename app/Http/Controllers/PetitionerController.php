@@ -50,26 +50,28 @@ class PetitionerController extends Controller
             'dob'               => 'required|string|max:250',
         ]);
 
-        if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
-        }else{
-            $toInsert = [  //Todo : Get the Confirmation for validations
-                'petitioner_id'       => request()->has('petitioner_id'     )? request('petitioner_id'     ) : null,
-                'petitioner_fullname' => request()->has('petitioner_name'   )? request('petitioner_name'   ) : null,
-                'address'             => request()->has('petitioner_address')? request('petitioner_address') : null,
-                'city'                => request()->has('petitioner_city'   )? request('petitioner_city'   ) : null,
-                'contact_no'          => request()->has('contact_no'        )? request('contact_no'        ) : null,
-                'gender'              => request()->has('canplan'           )? request('canplan'           ) : null,
-                'canplan'             => request()->has('canplan'           )? request('canplan'           ) : null,
-                'details'             => request()->has('details'           )? request('details'           ) : null,
-                'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
-                'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
-                'date_of_hair'        => request()->has('dob'               )? request('dob'               ) : null,
+        dd( $add_data);
 
-            ];
-            petitioner::create($toInsert);
-        }
-        return  redirect()->back()->withInput()->withErrors("hello world");
+        // if($add_data->fails()){
+        //     $add_data->errors()->add('from', 'ADD');
+        // }else{
+            // $toInsert = [  //Todo : Get the Confirmation for validations
+            //     'petitioner_id'       => request()->has('petitioner_id'     )? request('petitioner_id'     ) : null,
+            //     'petitioner_fullname' => request()->has('petitioner_name'   )? request('petitioner_name'   ) : null,
+            //     'address'             => request()->has('petitioner_address')? request('petitioner_address') : null,
+            //     'city'                => request()->has('petitioner_city'   )? request('petitioner_city'   ) : null,
+            //     'contact_no'          => request()->has('contact_no'        )? request('contact_no'        ) : null,
+            //     'gender'              => request()->has('canplan'           )? request('canplan'           ) : null,
+            //     'canplan'             => request()->has('canplan'           )? request('canplan'           ) : null,
+            //     'details'             => request()->has('details'           )? request('details'           ) : null,
+            //     'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
+            //     'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
+            //     'date_of_hair'        => request()->has('dob'               )? request('dob'               ) : null,
+
+            // ];
+            // petitioner::create($toInsert);
+        // }
+        // return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**

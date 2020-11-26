@@ -143,26 +143,7 @@
                                     <th>Action</th>
                                     </thead>
                                     <tbody>
-                                        @foreach($petitionerdata as $index => $petitioner)
-                                            <tr>
-                                                <td>{{ ++$index }}</td>
-                                                <td> {{$petitioner->petitioner_id}}</td>
-                                                <td> {{$petitioner->petitioner_fullname}} </td>
-                                                <td> {{$petitioner->address}} </td>
-                                                <td> {{$petitioner->city}}</td>
-                                                <td> {{$petitioner->contact_no}} </td>
-                                                <td class="text-primary">
-                                                    <button type="button" class="btn btn-warning" onclick="submit('submit')"> View </button>
-                                                    <button type="button" class="btn btn-danger modal-open"
-                                                            data-toggle="modal"
-                                                            id="delete"
-                                                            data-id="{{$petitioner->id}}"
-                                                            data-target="#deletePetitionerModal"
-                                                    > Delete </button>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
+                                        <!-- php -->
                                 </table>
                             </div>
                         </div>

@@ -1,12 +1,23 @@
 @extends('layouts.main')
 @section('content')
 
-    <div class="row register-form">
-        <div class="col-md-8 col-mx-auto">
-            <form class="form-horizontal custom-form" method="post" action="">
-                <h1>Admin Form</h1>
-                
-                <div class="form-group row">
+<div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>Admin Form </strong></h2>
+                        </div>
+                        <div class="card-body pt-5 ">
+
+                    <form class="form-horizontal custom-form" method="POST" action="{{ route('admin_forms') }}">
+                    {{ csrf_field() }}
+                    <div class="row">
+                    <div class="col-md-12">
+                    <div class="form-group row">
                     <div class="col-sm-4 label-column text-right">
                         <label class="control-label" for="name-input-field">Admin ID :</label>
                         </div>
@@ -103,10 +114,85 @@
                    <button type="button" class="btn btn-primary" onclick="submit('submit')">Submit</button>
                     <button type="button" class="btn btn-primary" onclick="clear('clear')">Clear</button>
                     <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
-                </div>
-                    
+                    </div>
+                 </div>
+                 </div>
+             </div>
+         </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+        <div class="row">
 
-            </form>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>Admin Table</strong></h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>#</th>
+                                    <th>Admin ID</th>
+                                    <th>Officer ID</th>
+                                    <th>Officer Name</th>
+                                    <th>Address</th>
+                                    <th>rank</th>
+                                    <th>DOB</th>
+                                    <th>Address</th>
+                                    <th>Contact No</th>
+                                    <th>Gender</th>
+                                    </thead>
+                                    <tbody>
+                                        <!-- php -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+     <!--Modal-->
+     <div id="deleteAdminModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alerts</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form name="delete_admin_forms" method="POST" action="{{ route('delete_admin_forms') }}">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="delete_petitioner_id" id="delete_admin_id" >
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this Admin?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var openmodal = document.querySelectorAll('.modal-open')
+        for (var i = 0; i < openmodal.length; i++) {
+            openmodal[i].addEventListener('click', function(event){
+                event.preventDefault()
+                toggleModal()
+                $("#delete_admin_id").val(this.getAttribute('data-id'))
+            })
+        }
+    </script>
  @endsection
