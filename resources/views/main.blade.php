@@ -1,7 +1,8 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
-<div class="col-md-4">
-        <h1 class="text-center">Goal:- </h1></div>
+    <div class="col-md-4">
+            <h1 class="text-center">Goal:- </h1>
+    </div>
     <div class="col-md-12">
         <p>The need for good record-keeping and information sharing practices has taken on added significance in today's global environment. Not only do good records provide crucial internal information (i.e.,business operations and case management support-not
             to mention the official memory of an agency's investigations), law enforcement agencies now need to communicate agency-to-agency and across continents in order to protect the Nation's citizens. Nothing is more important to accomplishing that
