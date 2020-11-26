@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
 <div class="content">
         <div class="container-fluid">
@@ -12,7 +12,8 @@
                         </div>
                         <div class="card-body pt-5 ">
 
-                        <form class="form-horizontal custom-form" method="POST" action="{{ route('case_outcome_form') }}">
+                        <form class="form-horizontal custom-form" >
+{{--                            method="POST" action="{{ route('case_outcome_form') }}"--}}
                         {{ csrf_field() }}
                         <div class="row">
                         <div class="col-md-12">
@@ -135,7 +136,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form name="delete_case_outcomes_form" method="POST" action="{{ route('delete_case_outcome') }}">
+                <form name="delete_case_outcomes_form" >
+{{--                    method="POST" action="{{ route('delete_case_outcome') }}"--}}
                     {{ csrf_field() }}
                     <input type="hidden" name="delete_case_outcome_id" id="delete_case_outcome_id" >
                     <div class="modal-body">
