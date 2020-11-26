@@ -49,7 +49,7 @@ class EntryTextController extends Controller
                 'details'           => '',
                 'officer_id'        => 'required',
                 'officer_name'      => 'required|string|max:250',
-                'dob'               => 'required|string|max:250',
+                'date_of_hair'      => 'required|string|max:250',
         ]);
 
         if($add_data->fails()){
@@ -66,7 +66,7 @@ class EntryTextController extends Controller
                 'details'             => request()->has('details'           )? request('details'           ) : null,
                 'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
                 'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
-                'date_of_hair'        => request()->has('dob'               )? request('dob'               ) : null,
+                'date_of_hair'        => request()->has('date_of_hair'      )? request('date_of_hair'               ) : null,
 
             ];
             petitioner::create($toInsert);
