@@ -39,37 +39,31 @@ class EntryTextController extends Controller
     public function store(Request $request)
     {
         $add_data = Validator::make(request()->all(),[
-                'petitioner_id'     => 'required',
-                'petitioner_name'   => 'required|string|max:250',
-                'petitioner_address'=> 'required|string|max:250',
-                'petitioner_city'   => 'required|string|max:250',
-                'contact_no'        => 'nullable|max:15|string',
-                'canplan'           => 'required|string|max:250',
-                'gender'            => 'required|string|max:250',
-                'details'           => '',
-                'officer_id'        => 'required',
-                'officer_name'      => 'required|string|max:250',
-                'date_of_hair'      => 'required|string|max:250',
+                'entry_id'          => 'required',
+                'reference_no'      => 'required|string|max:250',
+                'branch_name'       => 'required|string|max:250',
+                'date'              => 'required|string|max:250',
+                'time'              => 'nullable|max:15|string',
+                'fir_no'            => 'required|string|max:250',
+                'police_entry'      => 'required|string|max:250',
+                'details'           => 'required|string|max:250',
         ]);
 
         if($add_data->fails()){
             $add_data->errors()->add('from', 'ADD');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'petitioner_id'       => request()->has('petitioner_id'     )? request('petitioner_id'     ) : null,
-                'petitioner_fullname' => request()->has('petitioner_name'   )? request('petitioner_name'   ) : null,
-                'address'             => request()->has('petitioner_address')? request('petitioner_address') : null,
-                'city'                => request()->has('petitioner_city'   )? request('petitioner_city'   ) : null,
-                'contact_no'          => request()->has('contact_no'        )? request('contact_no'        ) : null,
-                'gender'              => request()->has('canplan'           )? request('canplan'           ) : null,
-                'canplan'             => request()->has('canplan'           )? request('canplan'           ) : null,
-                'details'             => request()->has('details'           )? request('details'           ) : null,
-                'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
-                'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
-                'date_of_hair'        => request()->has('date_of_hair'      )? request('date_of_hair'               ) : null,
+                'entry_id'     => request()->has('entry_id'    )? request('entry_id'     ) : null,
+                'reference_no' => request()->has('reference_no')? request('reference_no' ) : null,
+                'branch_name'  => request()->has('branch_name' )? request('branch_name'  ) : null,
+                'date'         => request()->has('date'        )? request('date'         ) : null,
+                'time'         => request()->has('time'        )? request('time'         ) : null,
+                'fir_no'       => request()->has('fir_no'      )? request('fir_no'       ) : null,
+                'police_entry' => request()->has('police_entry')? request('police_entry' ) : null,
+                'details'      => request()->has('details'     )? request('details'      ) : null,
 
             ];
-            petitioner::create($toInsert);
+            entry_text::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("added successfully!");
 //         $add_data = request()->all();
@@ -85,7 +79,7 @@ class EntryTextController extends Controller
      */
     public function show()
     {
-        $petitionerdata = petitioner::all();
+        $petitionerdata = entry_text::all();
             return view('add_data', [
                 'petitionerdata' => $petitionerdata,
             ]);
@@ -123,8 +117,8 @@ class EntryTextController extends Controller
      */
     public function destroy()
     {
-        $id = request('delete_petitioner_id');
-        petitioner::where('petitioner_id', $id)->delete();
+        $id = request('delete_entry_text_id');
+        entry_text::where('entry_id', $id)->delete();
 
         return redirect()->back();
     }

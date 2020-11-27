@@ -38,37 +38,34 @@ class CrimeFileController extends Controller
     public function store(Request $request)
     {
         $add_data = Validator::make(request()->all(),[
-            'petitioner_id'     => 'required',
-            'petitioner_name'   => 'required|string|max:250',
-            'petitioner_address'=> 'required|string|max:250',
-            'petitioner_city'   => 'required|string|max:250',
-            'contact_no'        => 'nullable|max:15|string',
-            'canplan'           => 'required|string|max:250',
-            'gender'            => 'required|string|max:250',
-            'details'           => 'required|string|max:250',
-            'officer_id'        => 'required',
-            'officer_name'      => 'required|string|max:250',
-            'dob'               => 'required|string|max:250',
+            'fir_no'             => 'required',
+            'accused_id'         => 'required|string|max:250',
+            'victim_id'          => 'required|string|max:250',
+            'petitioner_id'      => 'required|string|max:250',
+            'place_of_incident'  => 'nullable|max:15|string',
+            'date_of_incident'   => 'required|string|max:250',
+            'time_of_incident'   => 'required|string|max:250',
+            'date_filr'          => 'required|string|max:250',
+            'accused_status'     => 'required',
         ]);
 
         if($add_data->fails()){
             $add_data->errors()->add('from', 'ADD');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'petitioner_id'       => request()->has('petitioner_id'     )? request('petitioner_id'     ) : null,
-                'petitioner_fullname' => request()->has('petitioner_name'   )? request('petitioner_name'   ) : null,
-                'address'             => request()->has('petitioner_address')? request('petitioner_address') : null,
-                'city'                => request()->has('petitioner_city'   )? request('petitioner_city'   ) : null,
-                'contact_no'          => request()->has('contact_no'        )? request('contact_no'        ) : null,
-                'gender'              => request()->has('canplan'           )? request('canplan'           ) : null,
-                'canplan'             => request()->has('canplan'           )? request('canplan'           ) : null,
-                'details'             => request()->has('details'           )? request('details'           ) : null,
-                'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
-                'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
-                'date_of_hair'        => request()->has('dob'               )? request('dob'               ) : null,
+                'fir_no'            => request()->has('fir_no'       )? request('fir_no'       ) : null,
+                'accused_id'        => request()->has('accused_id'   )? request('accused_id'   ) : null,
+                'victim_id'         => request()->has('victim_id'    )? request('victim_id'    ) : null,
+                'petitioner_id'     => request()->has('petitioner_id')? request('petitioner_id') : null,
+                'place_of_incident' => request()->has('contact_no'   )? request('contact_no'   ) : null,
+                'date_of_incident'  => request()->has('canplan'      )? request('canplan'      ) : null,
+                'time_of_incident'  => request()->has('canplan'      )? request('canplan'      ) : null,
+                'date_filr'         => request()->has('details'      )? request('details'      ) : null,
+                'accused_status'    => request()->has('officer_id'   )? request('officer_id'   ) : null,
+
 
             ];
-            petitioner::create($toInsert);
+            crime_file::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("hello world");
     }

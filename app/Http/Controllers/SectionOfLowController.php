@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\petitioner;
 use App\section_of_low;
 use Illuminate\Http\Request;
@@ -38,37 +39,23 @@ class SectionOfLowController extends Controller
     public function store(Request $request)
     {
         $add_data = Validator::make(request()->all(),[
-            'petitioner_id'     => 'required',
-            'petitioner_name'   => 'required|string|max:250',
-            'petitioner_address'=> 'required|string|max:250',
-            'petitioner_city'   => 'required|string|max:250',
-            'contact_no'        => 'nullable|max:15|string',
-            'canplan'           => 'required|string|max:250',
-            'gender'            => 'required|string|max:250',
-            'details'           => 'required|string|max:250',
-            'officer_id'        => 'required',
-            'officer_name'      => 'required|string|max:250',
-            'dob'               => 'required|string|max:250',
+            'section_id'     => 'required',
+            'section_of_low' => 'required|string|max:250',
+            'sentence'       => 'required|string|max:250',
+            'detail'         => 'required|string|max:250',
         ]);
 
         if($add_data->fails()){
             $add_data->errors()->add('from', 'ADD');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'petitioner_id'       => request()->has('petitioner_id'     )? request('petitioner_id'     ) : null,
-                'petitioner_fullname' => request()->has('petitioner_name'   )? request('petitioner_name'   ) : null,
-                'address'             => request()->has('petitioner_address')? request('petitioner_address') : null,
-                'city'                => request()->has('petitioner_city'   )? request('petitioner_city'   ) : null,
-                'contact_no'          => request()->has('contact_no'        )? request('contact_no'        ) : null,
-                'gender'              => request()->has('canplan'           )? request('canplan'           ) : null,
-                'canplan'             => request()->has('canplan'           )? request('canplan'           ) : null,
-                'details'             => request()->has('details'           )? request('details'           ) : null,
-                'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
-                'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
-                'date_of_hair'        => request()->has('dob'               )? request('dob'               ) : null,
+                'section_id'        => request()->has('section_id'    )? request('section_id'    ) : null,
+                'section_of_low'    => request()->has('section_of_low')? request('section_of_low') : null,
+                'sentence'          => request()->has('sentence'      )? request('sentence'      ) : null,
+                'detail'            => request()->has('detail'        )? request('detail'        ) : null,
 
             ];
-            petitioner::create($toInsert);
+            section_of_low::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("hello world");
     }

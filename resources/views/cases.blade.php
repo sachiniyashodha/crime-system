@@ -114,7 +114,7 @@
                     </button>
                 </div>
                 <form name="delete_crime_case_form" >
-{{--                    method="POST" action="{{ route('delete_case') }}"--}}
+        {{--method="POST" action="{{ route('delete_case') }}"--}}
                     {{ csrf_field() }}
                     <input type="hidden" name="delete_case_id" id="delete_case_id" >
                     <div class="modal-body">

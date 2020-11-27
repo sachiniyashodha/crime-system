@@ -64,10 +64,10 @@
 
                     <div class="form-group row">
                     <div class="col-sm-4 label-column text-right">
-                        <label class="control-label" for="name-input-field">Fir ID :</label>
+                        <label class="control-label" for="name-input-field">Fir No :</label>
                         </div>
                         <div class="col-sm-6 ">
-                        <input class="form-control" type="text" name="fir_id">
+                        <input class="form-control" type="number" name="fir_no">
                     </div>
                     </div>
 
@@ -80,14 +80,14 @@
                     </div>
                     </div>
 
-                    <div class="form-group row">
+                    <div class="form- group row">
                         <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="email-input-field">Details : </label>
+                            <label class="control-label" for="email-input-field">Detail </label>
                             </div>
                             <div class="col-sm-6 ">
-                            <input class="form-control" type="text" name="details">
+                            <input type="file" id="file-input" name="detail" >
                         </div>
-                     </div>
+                    </div>
                 
                     
                      <div class="form-group row">
@@ -139,7 +139,7 @@
                                     <th>Time</th>
                                     <th>Fir ID</th>
                                     <th>Police Entry</th>
-                                    <th>Other Details</th>
+                                    <th>Details</th>
                                     </thead>
                                     <tbody>
                                         <!-- php -->

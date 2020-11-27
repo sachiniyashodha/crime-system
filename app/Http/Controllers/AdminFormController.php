@@ -37,6 +37,9 @@ class AdminFormController extends Controller
      */
     public function store(Request $request)
     {
+        // $add_data = request()->all();
+        //  dd($add_data);
+
         $add_data = Validator::make(request()->all(),[
             'admin_id'     => 'required',
             'officer_id'   => 'required|string|max:250',
@@ -61,7 +64,7 @@ class AdminFormController extends Controller
                 'contact_no'   => request()->has( 'contact_no'  )? request( 'contact_no'  ) : null,
                 'gender'       => request()->has( 'gender'      )? request( 'gender'      ) : null
             ];
-            petitioner::create($toInsert);
+            admin_form::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("hello world");
     }

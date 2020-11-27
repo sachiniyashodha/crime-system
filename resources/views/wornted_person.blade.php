@@ -21,6 +21,15 @@
                     <div class="col-sm-4 label-column text-right">
             <div class="form-group row">
                     <div class="col-sm-4 label-column text-right">
+                        <label class="control-label" for="name-input-field">Person ID : </label>
+                    </div>
+                    <div class="col-sm-6 ">  
+                        <input class="form-control" type="text" name="person_id">
+                    </div>
+                </div> 
+
+                <div class="form-group row">
+                    <div class="col-sm-4 label-column text-right">
                         <label class="control-label" for="name-input-field">Person Name : </label>
                     </div>
                     <div class="col-sm-6 ">  
@@ -28,9 +37,19 @@
                     </div>
                 </div>   
 
-            <div class="form-group row">
-                <div class="col-sm-4 label-column img-right">
-                     <div class="col-md-12"><img src="assets/img/a.jpg"></div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4 label-column img-center">
+                        <label class="control-label" for="name-input-img src"> Image</label>
+                    </div>
+                    <div class="col-sm-6 ">  
+                        <//input class="form-control" type="text" name="person_name">
+                        <input class="form-control" type="img src" name="assets/img/a.jpg">
+                    </div>
+                </div>  
+            <//div class="form-group row">
+                <//div class="col-sm-4 label-column img-right">
+                     <//div class="col-md-12"><img src="assets/img/a.jpg"></div>
                     </div>
                     <div class="row">
                           <div class="col-md-13">
@@ -82,11 +101,83 @@
                     <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
                     <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
                 </div>
+                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>Wornted Person Table</strong></h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>#</th>
+                                    <th>Person ID</th>
+                                    <th>person Full Name</th>
+                                    <th>Image</th>
+                                    <th>Person Details</th>
+                                   
+                                    </thead>
+                                    <tbody>
+                                        <!-- php -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-                    
-        </form>
+        </div>
     </div>
-    </div>  
+
+     <!--Modal-->
+     <div id="deleteWornted_personModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alerts</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form name="delete_wornted_person_form" >
+{{--                    method="POST" action="{{ route('delete_victim') }}"--}}
+                    {{ csrf_field() }}
+                    <input type="hidden" name="delete_person_id" id="delete_person_id" >
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this Person Information?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var openmodal = document.querySelectorAll('.modal-open')
+        for (var i = 0; i < openmodal.length; i++) {
+            openmodal[i].addEventListener('click', function(event){
+                event.preventDefault()
+                toggleModal()
+                $("#delete_person_id").val(this.getAttribute('data-id'))
+            })
+        }
+    </script>
 
 @endsection

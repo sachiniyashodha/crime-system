@@ -45,10 +45,10 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-4 label-column text-right"> 
-                        <label class="control-label" for="name-input-field">Offiicer Name :</label>
+                        <label class="control-label" for="name-input-field">Offiicer  Full Name :</label>
                     </div>
                     <div class="col-sm-6 ">  
-                        <input class="form-control" type="text" name="officer_name">
+                        <input class="form-control" type="text" name="officer_fullname">
                     </div>
                    
                 </div>

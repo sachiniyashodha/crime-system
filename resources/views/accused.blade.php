@@ -13,7 +13,7 @@
                         <div class="card-body pt-5 ">
 
                             <form class="form-horizontal custom-form" >
-{{--                                method="POST" action="{{ route('accuseds_form') }}"--}}
+                         {{--method="POST" action="{{ route('accuseds_form') }}"--}}
                             {{ csrf_field() }}
                             <div class="row">
                             <div class="col-md-12">
@@ -37,10 +37,10 @@
 
                     <div class="form-group row">
                         <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="name-input-field">DOB : </label>
+                            <label class="control-label" for="name-input-field">Date Of Birth : </label>
                         </div>
                         <div class="col-sm-6 ">
-                            <input class="form-control" type="date" name="dob" >
+                            <input class="form-control" type="date" name="date_of_birth" >
                         </div>
                     </div>
 
