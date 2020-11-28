@@ -42,54 +42,158 @@
                 <li class="nav-item sidebar-dropdown">
                     <a class="nav-link" href="#">
                         <i class="material-icons">person</i>
+                        <p>ENTER </p>
+                    </a>
+                    <div class="sidebar-submenu">
+                        <ul class="nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ENTER Avalability</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ENTER Registration </p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ENTER Copy </p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ENTER View </p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ENTER Statement </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item sidebar-dropdown">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">person</i>
                         <p>Add Data</p>
                     </a>
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
-                                <a class="nav-link" href="/add_data">
+                                <a class="nav-link nav-sub py-1" href="/add_data">
                                     <i class="material-icons">content_paste</i>
                                     <p>PETITIONER</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/victim">
+                                <a class="nav-link nav-sub py-1" href="/victim">
                                     <i class="material-icons">content_paste</i>
                                     <p>VICTIM</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/crime_file">
+                                <a class="nav-link nav-sub py-1" href="/crime_file">
                                     <i class="material-icons">content_paste</i>
                                     <p>FIR</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/investigate">
+                                <a class="nav-link nav-sub py-1" href="/investigate">
                                     <i class="material-icons">content_paste</i>
                                     <p>INVESTIGATION</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/cases">
+                                <a class="nav-link nav-sub py-1" href="/cases">
                                     <i class="material-icons">content_paste</i>
                                     <p>CASE</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/case_outcome">
+                                <a class="nav-link nav-sub py-1" href="/case_outcome">
                                     <i class="material-icons">content_paste</i>
                                     <p>CASE OUTCOME</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/section_of_low">
+                                <a class="nav-link nav-sub py-1" href="/section_of_low">
                                     <i class="material-icons">content_paste</i>
                                     <p>SECTION OF LOW</p>
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/wornted_person">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>WANTED PERSON</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item sidebar-dropdown">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">person</i>
+                        <p>Row Data</p>
+                    </a>
+                    <div class="sidebar-submenu">
+                        <ul class="nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ACCUSED</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/add_data">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>PETITIONER</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/victim">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>VICTIM</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/crime_file">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>FIR</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/investigate">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>INVESTIGATION</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/cases">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>CASE</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/case_outcome">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>CASE OUTCOME</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/section_of_low">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>SECTION OF LOW</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
                                     <i class="material-icons">content_paste</i>
                                     <p>WANTED PERSON</p>
                                 </a>
@@ -100,46 +204,37 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="#">
                         <i class="material-icons">person</i>
-                        <p>User Profile</p>
+                        <p>Entry Statement</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./tables.html">
-                        <i class="material-icons">content_paste</i>
-                        <p>Table List</p>
+                <li class="nav-item sidebar-dropdown">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">person</i>
+                        <p>Administratr </p>
                     </a>
+                    <div class="sidebar-submenu">
+                        <ul class="nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>Add Administratr</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>View Administratr </p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>Delete Administratr</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./typography.html">
-                        <i class="material-icons">library_books</i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./icons.html">
-                        <i class="material-icons">bubble_chart</i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./map.html">
-                        <i class="material-icons">location_ons</i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./notifications.html">
-                        <i class="material-icons">notifications</i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./rtl.html">
-                        <i class="material-icons">language</i>
-                        <p>RTL Support</p>
-                    </a>
-                </li>
-
             </ul>
         </div>
     </div>

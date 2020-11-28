@@ -154,6 +154,9 @@
   top: 14px;
 }
 
+.sidebar  li .nav-sub {
+  padding: 4px 15px;
+}
 
 .sidebar-wrapper .sidebar-dropdown .sidebar-submenu ul {
   padding: 0px 0px;
