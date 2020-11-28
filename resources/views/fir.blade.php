@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
 <div class="content">
         <div class="container-fluid">
@@ -12,8 +12,7 @@
                         </div>
                         <div class="card-body pt-5 ">
 
-                    <form class="form-horizontal custom-form" >
-{{--                        method="POST" action="{{ route('crime_files_form') }}"--}}
+                    <form class="form-horizontal custom-form" method="POST" action="{{ route('crime_files_form') }}">
                     {{ csrf_field() }}
                     <div class="row">
                     <div class="col-md-12">
@@ -156,6 +155,7 @@
                                     </thead>
                                     <tbody>
                                         <!-- php -->
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -166,43 +166,6 @@
         </div>
     </div>
 
-     <!--Modal-->
-     <div id="deletefirModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Alerts</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form name="delete_crime_files_form" >
-{{--                    method="POST" action="{{ route('delete_fir') }}"--}}
-                    {{ csrf_field() }}
-                    <input type="hidden" name="delete_fir_id" id="delete_fir_id" >
-                    <div class="modal-body">
-                        <p>Are you sure you want to delete this Fir?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Delete</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
 
-
-
-    <script>
-        var openmodal = document.querySelectorAll('.modal-open')
-        for (var i = 0; i < openmodal.length; i++) {
-            openmodal[i].addEventListener('click', function(event){
-                event.preventDefault()
-                toggleModal()
-                $("#delete_fir_id").val(this.getAttribute('data-id'))
-            })
-        }
-    </script>
 @endsection

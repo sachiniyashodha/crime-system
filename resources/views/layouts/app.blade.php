@@ -39,6 +39,64 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
+                <li class="nav-item sidebar-dropdown">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">person</i>
+                        <p>Add Data</p>
+                    </a>
+                    <div class="sidebar-submenu">
+                        <ul class="nav">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/add_data">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>PETITIONER</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/victim">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>VICTIM</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/crime_file">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>FIR</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/investigate">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>INVESTIGATION</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/cases">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>CASE</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/case_outcome">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>CASE OUTCOME</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/section_of_low">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>SECTION OF LOW</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>WANTED PERSON</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="#">
                         <i class="material-icons">person</i>
@@ -171,6 +229,7 @@
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>
