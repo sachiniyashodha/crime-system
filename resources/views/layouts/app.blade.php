@@ -33,7 +33,7 @@
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="nav-item active  ">
+                <li class="nav-item ">
                     <a class="nav-link" href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
@@ -87,7 +87,7 @@
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/add_data">
+                                <a class="nav-link nav-sub py-1" href="/petitioner">
                                     <i class="material-icons">content_paste</i>
                                     <p>PETITIONER</p>
                                 </a>

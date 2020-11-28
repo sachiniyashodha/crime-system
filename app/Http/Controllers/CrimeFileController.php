@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\crime_file;
-use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -33,7 +32,7 @@ class CrimeFileController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -62,8 +61,6 @@ class CrimeFileController extends Controller
                 'time_of_incident'  => request()->has('canplan'      )? request('canplan'      ) : null,
                 'date_filr'         => request()->has('details'      )? request('details'      ) : null,
                 'accused_status'    => request()->has('officer_id'   )? request('officer_id'   ) : null,
-
-
             ];
             crime_file::create($toInsert);
         }
@@ -78,7 +75,10 @@ class CrimeFileController extends Controller
      */
     public function show(crime_file $crime_file)
     {
-        //
+            $crimefiledata = crime_file::all();
+            return view('crime_file', [
+                'crimefiledata' => $crimefiledata,
+            ]);
     }
 
     /**

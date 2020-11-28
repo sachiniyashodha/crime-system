@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\entry_text;
 use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -81,7 +82,11 @@ class PetitionerController extends Controller
      */
     public function show(petitioner $petitioner)
     {
-        //
+        $petitionerdata = petitioner::all();
+//        dd($petitionerdata);
+        return view('petitioner', [
+            'petitionerdata' => $petitionerdata,
+        ]);
     }
 
     /**

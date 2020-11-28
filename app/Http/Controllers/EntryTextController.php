@@ -79,10 +79,10 @@ class EntryTextController extends Controller
      */
     public function show()
     {
-        $petitionerdata = entry_text::all();
-            return view('add_data', [
-                'petitionerdata' => $petitionerdata,
-            ]);
+//        $petitionerdata = entry_text::all();
+//            return view('petitioner', [
+//                'petitionerdata' => $petitionerdata,
+//            ]);
 
     }
 
@@ -113,7 +113,7 @@ class EntryTextController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\entry_text  $entry_text
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy()
     {

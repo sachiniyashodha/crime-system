@@ -131,7 +131,7 @@
                                     <th>Address</th>
                                     <th>City</th>
                                     <th>Contact No</th>
-                                    <th>Action</th>
+{{--                                    <th>Action</th>--}}
                                     </thead>
                                     <tbody>
                                     @foreach($petitionerdata as $index => $petitioner)
