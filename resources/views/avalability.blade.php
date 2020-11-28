@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row register-form">
+<div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal custom-form">
-                <h1> Person Avalability.</h1><br>
-                <label for="search-input">Enter Reference Number :</label>
+                <h1>Person Avalability</h1><br>
+                <label for="search-input">Enter ID Number :</label>
                 <div class="form-group has-error has-feedback">
                     <div class="input-group">
                         <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
@@ -21,13 +21,23 @@
                         <input class="form-control" type="text">
                     </div>
                 </div>
-                <div class="form-group"></div>
-                <div class="form-group has-warning"></div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">Do you want to Continue?</label>
+                
+                <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6">
+                   <button type="button" class="btn btn-primary" onclick="entry('entry')">Entry</button>
+                    
+                    </div>
+                 </div>
+                 </div>
+             </div>
+         </div>
+                                            
                 </div>
-                <div class="form-group"></div><a class="btn btn-default submit-button" role="button" href="police_entry.html">ENTRY </a></form>
+            </div>
+            </form>
         </div>
+    </div>
+    </div>
     </div>
 @endsection

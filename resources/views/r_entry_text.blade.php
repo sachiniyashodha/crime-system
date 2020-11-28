@@ -1,16 +1,18 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row register-form">
+    
+<div class="row register-form">
         <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal custom-form">
-                <div class="checkbox">
-                    <label>ENTRY VIEW TABLE</label>
-                    <label for="search-input">Enter ID Number :</label>
+                <h1>ENTRY VIEW TABLE</h1><br>
+                <label for="search-input">Enter ID Number :</label>
                 <div class="form-group has-error has-feedback">
                     <div class="input-group">
                         <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
                         <input class="form-control" type="search" name="search" id="search-input">
                     </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i></div>
+    
+    
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
