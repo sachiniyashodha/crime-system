@@ -5,12 +5,20 @@
             <form class="form-horizontal custom-form">
                 <div class="checkbox">
                     <label>ACCUSED TABLE</label>
-                </div>
-                <label for="search-input">Search ID</label>
-                <div class="input-group">
-                    <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
-                    <input class="form-control" type="search" name="search" id="search-input">
-                </div>
+                    
+                    <label for="search-input">Enter ID Number :</label>
+                <div class="form-group has-error has-feedback">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
+                        <input class="form-control" type="search" name="search" id="search-input">
+                    </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i></div>
+
+                <//div>
+                <//label for="search-input">Search ID<//label>
+                <//div class="input-group">
+                    <//div class="input-group-addon"><//span> <//i class="glyphicon glyphicon-search"><//i><//span><//div>
+                    <//input class="form-control" type="search" name="search" id="search-input">
+                <//div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>

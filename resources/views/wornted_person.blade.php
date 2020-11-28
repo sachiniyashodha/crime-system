@@ -46,18 +46,16 @@
                         <//input class="form-control" type="text" name="person_name">
                         <input class="form-control" type="img src" name="assets/img/a.jpg">
                     </div>
-                </div>  
-            <//div class="form-group row">
-                <//div class="col-sm-4 label-column img-right">
-                     <//div class="col-md-12"><img src="assets/img/a.jpg"></div>
-                    </div>
-                    <div class="row">
-                          <div class="col-md-13">
-                     <p>Makandure Madush is an underworld leader and a drug kingpin, who led organized crime and drug trafficking in Sri Lanka. ... One of the notorious drug dealer and underworld kingpin operated in Colombo. He was arrested in Dubai along with Makandure Madush on 04-02-2019.</p>
-                     <input class="form-control" type="text" name="text" >
-                        </div>
-                    </div>
+                </div> 
 
+                <div class="col-sm-2 label-column text-right">
+                        <label class="control-label col-form-label-lg pt-1" for="email-input-field">Information : </label>
+                        </div>
+                        <div class="col-sm-3 ">
+                        <textarea class="form-control form-control-lg" name="information"></textarea>
+                        </div>
+                        </div> 
+           
                 <div class="form- group row">
                         <div class="col-sm-4 label-column text-right">
                             <label class="control-label" for="email-input-field">Detail </label>
@@ -125,6 +123,7 @@
                                     <th>Person ID</th>
                                     <th>person Full Name</th>
                                     <th>Image</th>
+                                    <th>Information</th>
                                     <th>Person Details</th>
                                    
                                     </thead>
