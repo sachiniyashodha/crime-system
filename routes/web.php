@@ -62,7 +62,7 @@ Route::post('/case_outcome/store', 'CaseOutcomesController@store')->name('case_o
 
 
 Route::get('/cases', 'CrimeCaseController@show');
-Route::post('/cases/store', 'CrimeCaseController@store')->name('crime_case_forms');
+Route::post('/cases/store', 'CrimeCaseController@store')->name('crimecase_forms');
 
 
 //Route::get('/delete_admin', function () {return view('delete_admin');});
@@ -94,18 +94,18 @@ Route::get('/r_victim', function () {return view('r_victim');});
 Route::get('/investigate', 'InvestigationController@show');
 Route::post('/investigation/store', 'InvestigationController@store')->name('investigation_forms');
 
-Route::get('/section_of_low', function () {return view('section_of_low');});
+Route::get('/section_of_low', 'SectionOfLowController@show');
 Route::post('/section_of_low/store', 'SectionOfLowController@store')->name('section_of_low_forms');
 
 
-Route::get('/victim', function () {return view('victim');});
+Route::get('/victim', 'VictimController@show');
 Route::post('/victim/store', 'VictimController@store')->name('victim_forms');
 
 
 Route::get('/admin', function () {return view('admin');});
 
 
-Route::get('/wornted_person', function () {return view('wornted_person');});
+Route::get('/wornted_person',  'VictimController@show');
 Route::post('/wornted_person/store', 'wornted_personFormController@store')->name('wornted_person_forms');
 
 

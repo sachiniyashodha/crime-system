@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\crime_case;
+use App\investigation;
 use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -33,7 +34,7 @@ class CrimeCaseController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -53,7 +54,7 @@ class CrimeCaseController extends Controller
             ];
             crime_case::create($toInsert);
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
+        return redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**
@@ -64,7 +65,10 @@ class CrimeCaseController extends Controller
      */
     public function show(crime_case $crime_case)
     {
-        //
+        $crimecasedata = crime_case::all();
+        return view('cases', [
+            'crimecasedata' => $crimecasedata,
+        ]);
     }
 
     /**
