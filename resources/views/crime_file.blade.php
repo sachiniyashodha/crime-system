@@ -25,7 +25,7 @@
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-4 label-column text-right">
-                                                    <label class="control-label" for="name-input-field">Accused ID : </label>
+                                                    <label class="control-label" for="name-input-field" hidden>Accused ID : </label>
                                                 </div>
                                                 <div class="col-sm-6 ">
                                                     <input class="form-control" type="text" name="accused_id" >
@@ -133,9 +133,6 @@
                                     <thead class=" text-primary">
                                     <th>#</th>
                                     <th>Fir No</th>
-                                    <th>Accused ID</th>
-                                    <th>Victim</th>
-                                    <th>Petitioner</th>
                                     <th>Place Of Incident</th>
                                     <th>Date Of Incident</th>
                                     <th>Time Of Incident</th>
