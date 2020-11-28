@@ -61,8 +61,8 @@ Route::get('/case_outcome', 'CrimeCaseController@show');
 Route::post('/case_outcome/store', 'CaseOutcomesController@store')->name('case_outcome_forms');
 
 
-Route::get('/crime_case', 'CrimeCaseController@show');
-Route::post('/crime_case/store', 'CrimeCaseController@store')->name('crime_case_forms');
+Route::get('/cases', 'CrimeCaseController@show');
+Route::post('/cases/store', 'CrimeCaseController@store')->name('crime_case_forms');
 
 
 //Route::get('/delete_admin', function () {return view('delete_admin');});
