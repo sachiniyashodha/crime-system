@@ -11,56 +11,50 @@
                             <h2 class="card-title"><strong>Accused Form </strong></h2>
                         </div>
                         <div class="card-body pt-5 ">
-
-                            <form class="form-horizontal custom-form" >
-                         {{--method="POST" action="{{ route('accuseds_form') }}"--}}
+                            <form class="form-horizontal custom-form" method="POST" action="{{ route('accuseds_form') }}">
                             {{ csrf_field() }}
                             <div class="row">
-                            <div class="col-md-12">
-                            <div class="form-group row">
-                        <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="name-input-field">Accused ID : </label>
-                        </div>
-                        <div class="col-sm-6 ">
-                            <input class="form-control" type="text" name="accused_id" >
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="name-input-field">Accused Full Name : </label>
-                        </div>
-                        <div class="col-sm-6 ">
-                            <input class="form-control" type="text" name="accused_full_name" >
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="name-input-field">Date Of Birth : </label>
-                        </div>
-                        <div class="col-sm-6 ">
-                            <input class="form-control" type="date" name="date_of_birth" >
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="name-input-field">Address : </label>
-                        </div>
-                        <div class="col-sm-6 ">
-                            <input class="form-control" type="text" name="address" >
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="name-input-field">City : </label>
-                        </div>
-                        <div class="col-sm-6 ">
-                            <input class="form-control" type="text" name="city" >
-                        </div>
-                    </div>
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 label-column text-right">
+                                            <label class="control-label" for="name-input-field">Accused ID : </label>
+                                        </div>
+                                        <div class="col-sm-6 ">
+                                            <input class="form-control" type="text" name="accused_id" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 label-column text-right">
+                                            <label class="control-label" for="name-input-field">Accused Full Name : </label>
+                                        </div>
+                                        <div class="col-sm-6 ">
+                                            <input class="form-control" type="text" name="accused_full_name" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 label-column text-right">
+                                            <label class="control-label" for="name-input-field">Date Of Birth : </label>
+                                        </div>
+                                        <div class="col-sm-6 ">
+                                            <input class="form-control" type="date" name="date_of_birth" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 label-column text-right">
+                                            <label class="control-label" for="name-input-field">Address : </label>
+                                        </div>
+                                        <div class="col-sm-6 ">
+                                            <input class="form-control" type="text" name="address" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 label-column text-right">
+                                            <label class="control-label" for="name-input-field">City : </label>
+                                        </div>
+                                        <div class="col-sm-6 ">
+                                            <input class="form-control" type="text" name="city" >
+                                        </div>
+                                    </div>
 
                     <div class="form-group row">
                         <div class="col-sm-4 label-column text-right">
@@ -162,6 +156,7 @@
                                     </thead>
                                     <tbody>
                                         <!-- php -->
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -172,44 +167,8 @@
         </div>
     </div>
 
-    <!--Modal-->
-    <div id="deleteAccusedModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Alerts</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form name="delete_accuseds_form" >
-{{--                    method="POST" action="{{ route('delete_accuseds') }}"--}}
-                    {{ csrf_field() }}
-                    <input type="hidden" name="delete_petitioner_id" id="delete_accu_id" >
-                    <div class="modal-body">
-                        <p>Are you sure you want to delete this Accused?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Delete</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
 
 
-
-    <script>
-        var openmodal = document.querySelectorAll('.modal-open')
-        for (var i = 0; i < openmodal.length; i++) {
-            openmodal[i].addEventListener('click', function(event){
-                event.preventDefault()
-                toggleModal()
-                $("#delete_accu_id").val(this.getAttribute('data-id'))
-            })
-        }
-    </script>
 
     @endsection

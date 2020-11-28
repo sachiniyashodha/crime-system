@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\accused;
-use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -33,7 +32,7 @@ class AccusedController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -65,7 +64,7 @@ class AccusedController extends Controller
             ];
             accused::create($toInsert);
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
+        return redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**
