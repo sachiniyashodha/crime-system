@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\investigation;
-use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 

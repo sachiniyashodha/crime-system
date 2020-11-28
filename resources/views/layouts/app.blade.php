@@ -70,10 +70,10 @@
                                     <p>ENTER View </p>
                                 </a>
                             </li>
-                            <//li class="nav-item ">
-                                <//a class="nav-link nav-sub py-1" href="/wornted_person">
-                                    <//i class="material-icons">content_paste<//i>
-                                    <//p>ENTER Statement <//p>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ENTER Statement <p>
                                 </a>
                             </li>
                         </ul>

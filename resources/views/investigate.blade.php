@@ -12,7 +12,7 @@
                         </div>
                         <div class="card-body pt-5 ">
 
-                    <form class="form-horizontal custom-form" method="POST" action="{{ route('investigations_form') }}">
+                    <form class="form-horizontal custom-form" method="POST" action="{{ route('investigation_forms') }}">
                     {{ csrf_field() }}
                     <div class="row">
                     <div class="col-md-12">
