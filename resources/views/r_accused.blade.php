@@ -1,96 +1,80 @@
 @extends('layouts.app')
 @section('content')
-    
-<div class="row register-form">
-        <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal custom-form">
-                <h1>ACCUSED TABLE</h1><br>
-                <label for="search-input">Enter ID Number :</label>
-                <div class="form-group has-error has-feedback">
-                    <div class="input-group">
-                        <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
-                        <input class="form-control" type="search" name="search" id="search-input">
-                    </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i></div>
 
-   
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>ACCUSED TABLE</strong></h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row py-4">
+                                <div class="col-sm-3 pr-0">
+                                    <input class="form-control" id="searchdata" type="text" placeholder="Search..">
+                                </div>
+                                <div class="col-1 pt-2 ">
+                                    <icons-image _ngcontent-ebe-c22="" _nghost-ebe-c19="">
+                                        <span _ngcontent-ebe-c19="" class="material-icons icon-image-preview">search</span>
+                                    </icons-image>
+                                </div>
+                            </div>
 
-                <//div>
-                <//label for="search-input">Search ID<//label>
-                <//div class="input-group">
-                    <//div class="input-group-addon"><//span> <//i class="glyphicon glyphicon-search"><//i><//span><//div>
-                    <//input class="form-control" type="search" name="search" id="search-input">
-                <//div>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Accused ID</th>
-                                <th>Accused Full Name</th>
-                                <th>DOB </th>
-                                <th>Address </th>
-                                <th>City </th>
-                                <th>Contact no</th>
-                                <th>Gender </th>
-                                <th>status </th>
-                                <th>Number of crimes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 5</td>
-                                <td>Cell 6</td>
-                                <td>Cell 6</td>
-                                <td>Cell 7</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 5</td>
-                                <td>Cell 6</td>
-                                <td>Cell 6</td>
-                                <td>Cell 7</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="radio">
-                    <label> </label>
-                </div>
+                            <div class="table-responsive">
+                                <table id="accusedtable" class="table table-striped" >
+                                    <thead class=" text-primary">
+                                    <th>#</th>
+                                    <th>Accused ID</th>
+                                    <th>Accused Full Name</th>
+                                    <th>DOB </th>
+                                    <th>Address </th>
+                                    <th>City </th>
+                                    <th>Contact no</th>
+                                    <th>Gender </th>
+                                    <th>status </th>
+                                    <th>Number of crimes</th>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($accuseddata as $index => $accused)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$accused->accu_id}}</td>
+                                            <td>{{$accused->accused_fullname}}</td>
+                                            <td>{{$accused->dob}}</td>
+                                            <td>{{$accused->address}}</td>
+                                            <td>{{$accused->city}}</td>
+                                            <td>{{$accused->contact_no}}</td>
+                                            <td>{{$accused->gender}}</td>
+                                            <td>{{$accused->status}}</td>
+                                            <td>{{$accused->number_of_crime}}</td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
 
-                
-                <div class="form-group has-warning"></div>
-                <div class="form-group"></div>
-
-                <div class="form-group row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-6">
-                   <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
-                   <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
-                    
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                 </div>
-                 </div>
-             </div>
-         </div>
-                                            
                 </div>
             </div>
-            </form>
+
         </div>
     </div>
-    </div>
-    </div>
-            </form>
-        </div>
-    </div>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#searchdata").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#accusedtable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 @endsection

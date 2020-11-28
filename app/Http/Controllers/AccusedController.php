@@ -15,7 +15,8 @@ class AccusedController extends Controller
      */
     public function index()
     {
-        //
+        $accuseddata = accused::all();
+        return view('r_accused', [ 'accuseddata' => $accuseddata]);
     }
 
     /**
@@ -75,9 +76,10 @@ class AccusedController extends Controller
      */
     public function show(accused $accused)
     {
-        //
-    }
+        $accuseddata = accused::all();
+        return view('accused', ['accuseddata' => $accuseddata]);
 
+    }
     /**
      * Show the form for editing the specified resource.
      *

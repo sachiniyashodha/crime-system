@@ -29,3 +29,4 @@ jQuery(function ($) {
         $(".page-wrapper").addClass("toggled");
     });
 });
+
