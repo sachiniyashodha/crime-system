@@ -91,7 +91,7 @@ Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
 Route::get('/r_victim', function () {return view('r_victim');});
 
 
-Route::get('/investigate', function () { return view('investigation');});
+Route::get('/investigate', 'InvestigationController@show');
 Route::post('/investigation/store', 'InvestigationController@store')->name('investigation_forms');
 
 Route::get('/section_of_low', function () {return view('section_of_low');});

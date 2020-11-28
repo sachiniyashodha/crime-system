@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\crime_file;
 use App\investigation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -32,7 +33,7 @@ class InvestigationController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -69,7 +70,10 @@ class InvestigationController extends Controller
      */
     public function show(investigation $investigation)
     {
-        //
+        $investigationdata = investigation::all();
+        return view('investigate', [
+            'investigationdata' => $investigationdata,
+        ]);
     }
 
     /**

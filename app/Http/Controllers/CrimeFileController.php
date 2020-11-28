@@ -71,7 +71,7 @@ class CrimeFileController extends Controller
      * Display the specified resource.
      *
      * @param  \App\crime_file  $crime_file
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show(crime_file $crime_file)
     {
