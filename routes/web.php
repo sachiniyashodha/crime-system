@@ -47,6 +47,12 @@ Route::get('/petitioner', 'PetitionerController@show');
 Route::post('/petitioner/store', 'PetitionerController@store')->name('petitioner_form');
 //Route::post('/petitioner/delete', 'PetitionerController@delete')->name('delete_petitioner');
 
+Route::get('/case_outcome', 'CaseOutcomesController@show');
+Route::post('/case_outcome/store', 'CaseOutcomesController@store')->name('caseoutcome_form');
+
+Route::get('/cases', 'CrimeCaseController@show');
+Route::post('/cases/store', 'CrimeCaseController@store')->name('crimecase_forms');
+
 
 Route::get('/administratr', function () { return view('administratr');});
 Route::post('/administratr/store', 'AdminFormController@store')->name('administratr');
@@ -57,12 +63,7 @@ Route::get('/avalability', function () {
     return view('avalability');
 });
 
-Route::get('/case_outcome', 'CrimeCaseController@show');
-Route::post('/case_outcome/store', 'CaseOutcomesController@store')->name('case_outcome_forms');
 
-
-Route::get('/cases', 'CrimeCaseController@show');
-Route::post('/cases/store', 'CrimeCaseController@store')->name('crimecase_forms');
 
 
 //Route::get('/delete_admin', function () {return view('delete_admin');});

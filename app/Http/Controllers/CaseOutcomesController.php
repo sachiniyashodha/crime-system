@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\case_outcomes;
+use App\crime_file;
 use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -68,7 +69,10 @@ class CaseOutcomesController extends Controller
      */
     public function show(case_outcomes $case_outcomes)
     {
-        //
+        $case_outcomesdata = case_outcomes::all();
+        return view('case_outcome', [
+            'case_outcomesdata' => $case_outcomesdata,
+        ]);
     }
 
     /**
