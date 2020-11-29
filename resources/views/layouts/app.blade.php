@@ -15,8 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+   
     <!-- Material Kit CSS -->
     <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.min.css') }}" />
@@ -88,6 +89,14 @@
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/accused">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>ACCUSED</p>
+                                </a>
+
+
+                            </li>
+                            <li class="nav-item ">
                                 <a class="nav-link nav-sub py-1" href="/petitioner">
                                     <i class="material-icons">content_paste</i>
                                     <p>PETITIONER</p>
@@ -152,7 +161,7 @@
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/row_data">
+                                <a class="nav-link nav-sub py-1" href="/r_petitioner">
                                     <i class="material-icons">content_paste</i>
                                     <p>PETITIONER</p>
                                 </a>

@@ -48,6 +48,7 @@ class AccusedController extends Controller
             'status'           => 'nullable|max:15|string',
             'number_of_crime'  => 'nullable|max:15|string',
         ]);
+        //  dd($add_data);
 
         if($add_data->fails()){
             $add_data->errors()->add('from', 'ADD');
@@ -55,7 +56,7 @@ class AccusedController extends Controller
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'accused_id'       => request()->has('accused_id'      )? request('accused_id'      ) : null,
                 'accused_fullname' => request()->has('accused_fullname')? request('accused_fullname') : null,
-                'date_of_birth'    => request()->has('date_of_birth'   )? request('date_of_birth'   ) : null,
+                'dob'              => request()->has('date_of_birth'   )? request('date_of_birth'   ) : null,
                 'address'          => request()->has('address'         )? request('address'         ) : null,
                 'city'             => request()->has('city'            )? request('city'            ) : null,
                 'contact_no'       => request()->has('contact_no'      )? request('contact_no'      ) : null,

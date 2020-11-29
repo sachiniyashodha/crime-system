@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\entry_text;
 use App\petitioner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -16,7 +15,8 @@ class PetitionerController extends Controller
      */
     public function index()
     {
-        //
+        $petitionerdata = petitioner::all();
+        return view('r_petitioner', [ 'petitionerdata' => $petitionerdata]);
     }
 
     /**
@@ -48,7 +48,7 @@ class PetitionerController extends Controller
             'details'           => 'required|string|max:250',
             'officer_id'        => 'required',
             'officer_name'      => 'required|string|max:250',
-            'dob'               => 'required|string|max:250',
+            'date_of_hair'      => 'required|string|max:250',
         ]);
         
 
@@ -66,7 +66,7 @@ class PetitionerController extends Controller
                 'details'             => request()->has('details'           )? request('details'           ) : null,
                 'officer_id'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
                 'officer_name'        => request()->has('officer_name'      )? request('officer_name'      ) : null,
-                'date_of_hair'        => request()->has('dob'               )? request('dob'               ) : null,
+                'date_of_hair'        => request()->has('date_of_hair'      )? request('date_of_hair'               ) : null,
 
             ];
             petitioner::create($toInsert);
@@ -83,7 +83,6 @@ class PetitionerController extends Controller
     public function show(petitioner $petitioner)
     {
         $petitionerdata = petitioner::all();
-//        dd($petitionerdata);
         return view('petitioner', [
             'petitionerdata' => $petitionerdata,
         ]);

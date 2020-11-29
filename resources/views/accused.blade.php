@@ -11,7 +11,7 @@
                             <h2 class="card-title"><strong>Accused Form </strong></h2>
                         </div>
                         <div class="card-body pt-5 ">
-                            <form class="form-horizontal custom-form" method="POST" action="{{ route('accuseds_form') }}">
+                            <form class="form-horizontal custom-form" method="POST" action="{{ route('accused_form') }}">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-12">
@@ -28,7 +28,7 @@
                                             <label class="control-label" for="name-input-field">Accused Full Name : </label>
                                         </div>
                                         <div class="col-sm-6 ">
-                                            <input class="form-control" type="text" name="accused_full_name" >
+                                            <input class="form-control" type="text" name="accused_fullname" >
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -155,7 +155,20 @@
                                     <th>Number of Crime</th>
                                     </thead>
                                     <tbody>
-                                        <!-- php -->
+                                    @foreach($accuseddata as $index => $accused)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$accused->accu_id}}</td>
+                                            <td>{{$accused->accused_fullname}}</td>
+                                            <td>{{$accused->address}}</td>
+                                            <td>{{$accused->city}}</td>
+                                            <td>{{$accused->contact_no}}</td>
+                                            <td>{{$accused->gender}}</td>
+                                            <td>{{$accused->status}}</td>
+                                            <td>{{$accused->number_of_crime}}</td>
+                                        </tr>
+
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

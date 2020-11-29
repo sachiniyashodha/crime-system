@@ -27,7 +27,7 @@ Route::get('/police_entry', 'AccusedController@show');
 Route::post('/police_entry/store', 'AccusedController@store')->name('accused_forms');
 
 Route::get('/accused', 'AccusedController@show');
-Route::post('/accused/store', 'AccusedController@store')->name('accused_forms');
+Route::post('/accused/store', 'AccusedController@store')->name('accused_form');
 
 
 //Route::get('/login', function () {return view('login'); });
@@ -83,7 +83,7 @@ Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_f
 
 
 
-Route::get('/r_accused', function () {return view('r_accused');});
+// Route::get('/r_accused', function () {return view('r_accused');});
 Route::get('/r_case_outcome', function () {return view('r_case_outcome');});
 Route::get('/r_case', function () { return view('r_case');});
 Route::get('/r_entry_text', function () { return view('r_entry_text');});
@@ -92,6 +92,7 @@ Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
 Route::get('/r_victim', function () {return view('r_victim');});
 
 Route::get('/r_accused', 'AccusedController@index');
+Route::get('/r_petitioner', 'PetitionerController@index');
 
 Route::get('/investigate', 'InvestigationController@show');
 Route::post('/investigation/store', 'InvestigationController@store')->name('investigation_forms');
