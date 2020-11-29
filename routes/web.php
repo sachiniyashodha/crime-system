@@ -32,8 +32,8 @@ Route::get('/accused', 'AccusedController@show');
 Route::post('/accused/store', 'AccusedController@store')->name('accused_form');
 
 
-//Route::get('/login', function () {return view('login'); });
-//Route::post('/login', 'Auth\LoginController@store')->name('login');
+Route::get('/', function () {return view('Auth\login'); });
+Route::post('/login', 'Auth\LoginController@store')->name('login');
 
 Route::get('/register', function () {return view('register'); });
 Route::post('/create', 'Auth\RegisterController@store')->name('register');
