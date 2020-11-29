@@ -10,7 +10,7 @@
 
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <h2 class="card-title"><strong>ACCUSED TABLE </strong></h2>
+                            <h2 class="card-title"><strong>AVALABILITY </strong></h2>
                         </div>
 
     

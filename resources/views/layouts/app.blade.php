@@ -36,7 +36,7 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="main">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -217,15 +217,32 @@
                         <p>Entry Statement</p>
                     </a>
                 </li>
+                <div class="sidebar-submenu">
+                        <ul class="nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/r_entry_text">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>View Text Entry</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link nav-sub py-1" href="/r_police_entry_c">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>View Entry Captured </p>
+                                </a>
+                           
+                        </ul>
+                    </div>
+
                 <li class="nav-item sidebar-dropdown">
-                    <a class="nav-link" href="administratr">
+                    <a class="nav-link" href="add_admin">
                         <i class="material-icons">person</i>
                         <p>Administratr </p>
                     </a>
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/add_admin">
+                                <a class="nav-link nav-sub py-1" href="/">
                                     <i class="material-icons">content_paste</i>
                                     <p>Add Administratr</p>
                                 </a>
