@@ -12,8 +12,8 @@
                         </div>
                         <div class="card-body pt-5 ">
 
-                    <form class="form-horizontal custom-form" >
-{{--                        method="POST" action="{{ route('entry_texts_form') }}"--}}
+                    <form class="form-horizontal custom-form"  method="POST" action="{{ route('entrytext_form') }}">
+
                     {{ csrf_field() }}
                     <div class="row">
                     <div class="col-md-12">
@@ -141,7 +141,18 @@
                                     <th>Details</th>
                                     </thead>
                                     <tbody>
-                                        <!-- php -->
+                                        @foreach($entrytextdata as $index => $entrytext)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$entrytext->reference_no}}</td>
+                                            <td>{{$entrytext->branch_name}}</td>
+                                            <td>{{$entrytext->date}}</td>
+                                            <td>{{$entrytext->fir_id}}</td>
+                                            <td>{{$entrytext->police_entry}}</td>
+                                            <td>{{$entrytext->other_details}}</td>
+                                        </tr>
+
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

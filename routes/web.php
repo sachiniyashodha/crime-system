@@ -59,33 +59,22 @@ Route::post('/cases/store', 'CrimeCaseController@store')->name('crimecase_forms'
 Route::get('/administratr', function () { return view('administratr');});
 Route::post('/administratr/store', 'AdminFormController@store')->name('administratr');
 
+Route::get('/delete_admin', function () {return view('delete_admin');});
+Route::post('/delete_admin/store', 'delete_adminController@store')->name('delete_admin_forms');
 
+Route::get('/entry_captured', function () {return view('entry_captured');});
+Route::post('/entry_captured/store', 'entry_capturedController@store')->name('entry_captured_forms');
+
+Route::get('/entry_text', 'EntryTextController@show');
+Route::post('/entry_text/store', 'EntryTextController@store')->name('entrytext_form');
+
+Route::get('/crime_file', 'CrimeFileController@show');
+Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_forms');
 
 Route::get('/avalability', function () {
     return view('avalability');
 });
 
-
-
-
-Route::get('/delete_admin', function () {return view('delete_admin');});
-Route::post('/delete_admin/store', 'delete_adminController@store')->name('delete_admin_forms');
-//
-//
-Route::get('/entry_captured', function () {return view('entry_captured');});
-Route::post('/entry_captured/store', 'entry_capturedController@store')->name('entry_captured_forms');
-
-
-Route::get('/entry_text', 'EntryTextController@show');
-Route::post('/entry_text/store', 'EntryTextController@store')->name('entry_text_forms');
-
-
-Route::get('/crime_file', 'CrimeFileController@show');
-Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_forms');
-
-
-
-// Route::get('/r_accused', function () {return view('r_accused');});
 Route::get('/r_case_outcome', function () {return view('r_case_outcome');});
 Route::get('/r_case', function () { return view('r_case');});
 Route::get('/r_entry_text', function () { return view('r_entry_text');});

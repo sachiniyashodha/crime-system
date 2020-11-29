@@ -79,11 +79,10 @@ class EntryTextController extends Controller
      */
     public function show()
     {
-//        $petitionerdata = entry_text::all();
-//            return view('petitioner', [
-//                'petitionerdata' => $petitionerdata,
-//            ]);
-
+       $entrytextdata = entry_text::all();
+           return view('entry_text', [
+               'entrytextdata' => $entrytextdata,
+           ]);
     }
 
     /**
