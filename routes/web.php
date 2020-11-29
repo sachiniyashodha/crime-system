@@ -23,8 +23,10 @@ Route::get('/police_entry', function () {
     return view('police_entry');
 });
 
-Route::get('/police_entry', 'AccusedController@show');
-Route::post('/police_entry/store', 'AccusedController@store')->name('accused_forms');
+Route::get('/police_entry', function () {return view('police_entry'); });
+
+// Route::get('/police_entry', 'AccusedController@show');
+// Route::post('/police_entry/store', 'AccusedController@store')->name('accused_forms');
 
 Route::get('/accused', 'AccusedController@show');
 Route::post('/accused/store', 'AccusedController@store')->name('accused_form');
@@ -66,12 +68,12 @@ Route::get('/avalability', function () {
 
 
 
-//Route::get('/delete_admin', function () {return view('delete_admin');});
-//Route::post('/delete_admin/store', 'delete_adminController@store')->name('delete_admin_forms');
+Route::get('/delete_admin', function () {return view('delete_admin');});
+Route::post('/delete_admin/store', 'delete_adminController@store')->name('delete_admin_forms');
 //
 //
-//Route::get('/entry_captured', function () {return view('entry_captured');});
-//Route::post('/entry_captured/store', 'entry_capturedController@store')->name('entry_captured_forms');
+Route::get('/entry_captured', function () {return view('entry_captured');});
+Route::post('/entry_captured/store', 'entry_capturedController@store')->name('entry_captured_forms');
 
 
 Route::get('/entry_text', 'EntryTextController@show');
