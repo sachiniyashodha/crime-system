@@ -1,14 +1,18 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="content">
+<div class="content">
         <div class="container-fluid">
+
             <div class="row">
                 <div class="col-md-12">
+
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <h2 class="card-title"><strong>ACCUSED TABLE</strong></h2>
+                            <h2 class="card-title"><strong>ACCUSED TABLE </strong></h2>
                         </div>
+
+    
                         <div class="card-body">
                             <div class="row py-4">
                                 <div class="col-sm-3 pr-0">

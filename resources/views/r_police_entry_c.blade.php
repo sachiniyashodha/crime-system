@@ -1,14 +1,26 @@
-<div class="row register-form">
-        <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal custom-form">
-                <div class="checkbox">
-                    <label>ENTRY Voice TABLE</label>
-                    <label for="search-input">Enter ID Number :</label>
-                <div class="form-group has-error has-feedback">
-                    <div class="input-group">
-                        <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
-                        <input class="form-control" type="search" name="search" id="search-input">
-                    </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i></div>
+<div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>CAPTURE POLICE ENTRY TABLE </strong></h2>
+                        </div>
+
+    
+                        <div class="card-body">
+                            <div class="row py-4">
+                                <div class="col-sm-3 pr-0">
+                                    <input class="form-control" id="searchdata" type="text" placeholder="Search..">
+                                </div>
+                                <div class="col-1 pt-2 ">
+                                    <icons-image _ngcontent-ebe-c22="" _nghost-ebe-c19="">
+                                        <span _ngcontent-ebe-c19="" class="material-icons icon-image-preview">search</span>
+                                    </icons-image>
+                                </div>
+                            </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>

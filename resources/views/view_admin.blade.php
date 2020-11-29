@@ -1,9 +1,28 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row register-form">
-        <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal custom-form">
-                <h1>List of the Admin </h1>
+<div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h2 class="card-title"><strong>VIEW ADMIN TABLE </strong></h2>
+                        </div>
+
+    
+                        <div class="card-body">
+                            <div class="row py-4">
+                                <div class="col-sm-3 pr-0">
+                                    <input class="form-control" id="searchdata" type="text" placeholder="Search..">
+                                </div>
+                                <div class="col-1 pt-2 ">
+                                    <icons-image _ngcontent-ebe-c22="" _nghost-ebe-c19="">
+                                        <span _ngcontent-ebe-c19="" class="material-icons icon-image-preview">search</span>
+                                    </icons-image>
+                                </div>
+                            </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
