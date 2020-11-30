@@ -11,7 +11,7 @@
                             <h2 class="card-title"><strong>Section Of Low</strong></h2>
                             </div>
                         <div class="card-body pt-5 ">
-                            <form class="form-horizontal custom-form" method="POST" action="{{ route('section_of_low_form') }}">
+                            <form class="form-horizontal custom-form" method="POST" action="{{ route('section_of_low_forms') }}">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-12">
@@ -93,10 +93,6 @@
                                             <td>{{$section_of_low->section_of_low}}</td>
                                             <td>{{$section_of_low->sentence}}</td>
                                             <td>{{$section_of_low->detail}}</td>
-                                            <td>{{$section_of_low->contact_no}}</td>
-                                            <td>{{$section_of_low->gender}}</td>
-                                            <td>{{$section_of_low->details}}</td>
-                                        </tr>
                                     @endforeach 
                                     </tbody>  
                                 </table>

@@ -9,7 +9,7 @@ class wornted_person extends Model
     protected $fillable = [
         'person_id',
         'person_name',
-        'image',
+        'images',
         'information',
         'details',
     ];

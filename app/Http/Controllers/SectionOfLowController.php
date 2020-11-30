@@ -49,10 +49,10 @@ class SectionOfLowController extends Controller
             $add_data->errors()->add('from', 'ADD');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'section_id'        => request()->has('section_id'    )? request('section_id'    ) : null,
-                'section_of_low'    => request()->has('section_of_low')? request('section_of_low') : null,
-                'sentence'          => request()->has('sentence'      )? request('sentence'      ) : null,
-                'detail'            => request()->has('detail'        )? request('detail'        ) : null,
+                'section_id'     => request()->has('section_id'    )? request('section_id'    ) : null,
+                'section_of_low' => request()->has('section_of_low')? request('section_of_low') : null,
+                'sentence'       => request()->has('sentence'      )? request('sentence'      ) : null,
+                'detail'         => request()->has('detail'        )? request('detail'        ) : null,
 
             ];
             section_of_low::create($toInsert);

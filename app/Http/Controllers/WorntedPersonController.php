@@ -39,7 +39,7 @@ class WorntedPersonController extends Controller
             $add_data = Validator::make(request()->all(),[
                 'person_id'          => 'required',
                 'person_name'        => 'required|string|max:250',
-                'image'              => 'required|string|max:250',
+                'images'             => 'required|string|max:250',
                 'information'        => 'required|string|max:250',
                 'details'            => 'required|string|max:250',
                 ]);
@@ -51,7 +51,7 @@ class WorntedPersonController extends Controller
     $toInsert = [  //Todo : Get the Confirmation for validations
         'person_id'     => request()->has('person_id'   )? request('person_id'  ) : null,
         'person_name'   => request()->has('person_name' )? request('person_name') : null,
-        'image'         => request()->has('image'       )? request('image'      ) : null,
+        'images'        => request()->has('image'       )? request('image'      ) : null,
         'information'   => request()->has('information' )? request('information') : null,
         'details'       => request()->has('details'     )? request('details'    ) : null,
  

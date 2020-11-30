@@ -61,20 +61,7 @@
                     </div>
                     
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label text-left" for="invalidCheck">
-                            I've read and accept the terms and conditions
-                        </label>
-                        <div class="invalid-feedback text-left">
-                            You must agree before submitting.
-                        </div>
-                    </div>
-                    </div>
-                </div>
+               
                 <div class="form-group row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-6">

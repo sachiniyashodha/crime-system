@@ -25,7 +25,7 @@
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-4 label-column text-right">
-                                                    <label class="control-label" for="name-input-field" hidden>Accused ID : </label>
+                                                    <label class="control-label" for="name-input-field">Accused ID : </label>
                                                 </div>
                                                 <div class="col-sm-6 ">
                                                     <input class="form-control" type="text" name="accused_id" >
@@ -76,7 +76,7 @@
                                                     <label class="control-label" for="name-input-field">Date Filr : </label>
                                                 </div>
                                                 <div class="col-sm-6 ">
-                                                    <input class="form-control" type="time" name="date_filr" >
+                                                    <input class="form-control" type="date" name="date_filr" >
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -91,20 +91,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <div class="col-sm-4"></div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                                        <label class="form-check-label text-left" for="invalidCheck">
-                                                            I've read and accept the terms and conditions
-                                                        </label>
-                                                        <div class="invalid-feedback text-left">
-                                                            You must agree before submitting.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="form-group row">
                                                 <div class="col-sm-4"></div>
                                                 <div class="col-sm-6">
@@ -132,22 +119,29 @@
                                 <table class="table">
                                     <thead class=" text-primary">
                                     <th>#</th>
-                                    <th>Fir No</th>
-                                    <th>Place Of Incident</th>
-                                    <th>Date Of Incident</th>
-                                    <th>Time Of Incident</th>
-                                    <th>Date Fir</th>
-                                    <th>Accused Status</th>
+                                    <th>fir_no</th>
+                                    <th>accused_id</th>
+                                    <th>victim_id</th>
+                                    <th>petitioner_id</th>
+                                    <th>place_of_incident</th>
+                                    <th>date_of_incident</th>
+                                    <th>time_of_incident</th>
+                                    <th>date_filr</th>
+                                    <th>accused_status</th>
                                     </thead>
                                     <tbody>
                                     @foreach($crimefiledata as $index => $crimefile)
                                         <tr>
                                             <td>{{ ++$index }}</td>
                                             <td>{{$crimefile->fir_no}}</td>
+                                            <td>{{$crimefile->accused_id}}</td>
+                                            <td>{{$crimefile->victim_id}}</td>
+                                            <td>{{$crimefile->petitioner_id}}</td>
                                             <td>{{$crimefile->place_of_incident}}</td>
                                             <td>{{$crimefile->date_of_incident}}</td>
                                             <td>{{$crimefile->time_of_incident}}</td>
                                             <td>{{$crimefile->date_filr}}</td>
+                                            <td>{{$crimefile->accused_status}}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>

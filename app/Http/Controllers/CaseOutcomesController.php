@@ -53,7 +53,7 @@ class CaseOutcomesController extends Controller
                 'case_outcome_id'   => request()->has('case_outcome_id'  )? request('case_outcome_id'  ) : null,
                 'case_id'           => request()->has('case_id'          )? request('case_id'          ) : null,
                 'section_of_low_id' => request()->has('section_of_low_id')? request('section_of_low_id') : null,
-                'details'           => request()->has('details'          )? request('details'          ) : null,
+                'deatails'           => request()->has('details'          )? request('details'          ) : null,
                 'status'            => request()->has('status'           )? request('status'           ) : null,
             ];
             case_outcomes::create($toInsert);

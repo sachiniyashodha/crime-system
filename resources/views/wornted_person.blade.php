@@ -22,7 +22,7 @@
                                 <label class="control-label" for="name-input-field">Person ID  : </label>
                                 </div>
                                  <div class="col-sm-6 ">
-                                    <input class="form-control" type="text" name="accused_id" >
+                                    <input class="form-control" type="text" name="person_id" >
                                     </div>
                                 </div>
                 <div class="form-group row">
@@ -36,10 +36,10 @@
 
                 <div class="form- group row">
                         <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="email-input-field">Image </label>
+                            <label class="control-label" for="email-input-field">Images </label>
                             </div>
                             <div class="col-sm-6 ">
-                            <input type="file" id="file-input" name="image" >
+                            <input type="file" id="file-input" name="images" >
                         </div>
                     </div>
                 
@@ -56,10 +56,10 @@
                 
                 <div class="form- group row">
                         <div class="col-sm-4 label-column text-right">
-                            <label class="control-label" for="email-input-field">Detail </label>
+                            <label class="control-label" for="email-input-field">Details </label>
                             </div>
                             <div class="col-sm-6 ">
-                            <input type="file" id="file-input" name="detail" >
+                            <input type="file" id="file-input" name="details" >
                         </div>
                     </div>
                     <div class="form-group row">
@@ -71,23 +71,6 @@
                 </div>
                 </div>
                     
-                
-
-                <div class="form-group row">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label text-left" for="invalidCheck">
-                            I've read and accept the terms and conditions
-                        </label>
-                        <div class="invalid-feedback text-left">
-                            You must agree before submitting.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
 
                 <div class="form-group row">
                 <div class="col-sm-4"></div>
@@ -119,14 +102,25 @@
                                     <thead class=" text-primary">
                                     <th>#</th>
                                     <th>Person ID</th>
-                                    <th>person Full Name</th>
-                                    <th>Image</th>
+                                    <th>person Name</th>
+                                    <th>Images</th>
                                     <th>Information</th>
-                                    <th>Person Details</th>
+                                    <th>Details</th>
                                    
                                     </thead>
                                     <tbody>
-                                        <!-- php -->
+                                    @foreach($wornted_persondata as $index =>$wornted_person)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$wornted_person->person_id}}</td>
+                                            <td>{{$wornted_person->person_name}}</td>
+                                            <td>{{$wornted_person->images}}</td>
+                                            <td>{{$wornted_person->information}}</td>
+                                            <td>{{$wornted_person->details}}</td>
+                                              
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

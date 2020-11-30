@@ -40,7 +40,6 @@ class InvestigationController extends Controller
         $add_data = Validator::make(request()->all(),[
             'investigation_id'  => 'required',
             'case_id'           => 'required|string|max:250',
-            'officer_id'        => 'required|string|max:250',
             'officer_fullname'  => 'required|string|max:250',
             'date_start'        => 'nullable|max:15|string',
             'date_end'          => 'required|string|max:250',
@@ -52,7 +51,6 @@ class InvestigationController extends Controller
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'investigation_id'    => request()->has('investigation_id'  )? request('investigation_id'  ) : null,
                 'case_id'             => request()->has('case_id'           )? request('case_id'           ) : null,
-                'officer_id'          => request()->has('petitioner_address')? request('petitioner_address') : null,
                 'officer_fullname'    => request()->has('officer_fullname'  )? request('officer_fullname'  ) : null,
                 'date_start'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
                 'date_end'            => request()->has('date_end'          )? request('date_end'          ) : null,
@@ -61,6 +59,7 @@ class InvestigationController extends Controller
         }
         return  redirect()->back()->withInput()->withErrors("hello world");
     }
+
 
     /**
      * Display the specified resource.

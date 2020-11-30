@@ -211,12 +211,11 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item ">
+                <li class="nav-item sidebar-dropdown">
                     <a class="nav-link" href="#">
                         <i class="material-icons">person</i>
                         <p>Entry Statement</p>
                     </a>
-                </li>
                 <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
@@ -230,19 +229,19 @@
                                     <i class="material-icons">content_paste</i>
                                     <p>View Entry Captured </p>
                                 </a>
-                           
+                           </li>
                         </ul>
                     </div>
-
+                </li>
                 <li class="nav-item sidebar-dropdown">
-                    <a class="nav-link" href="add_admin">
+                    <a class="nav-link" href="#">
                         <i class="material-icons">person</i>
                         <p>Administratr </p>
                     </a>
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/">
+                                <a class="nav-link nav-sub py-1" href="/view_admin">
                                     <i class="material-icons">content_paste</i>
                                     <p>Add Administratr</p>
                                 </a>
