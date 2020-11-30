@@ -41,37 +41,37 @@
                 </div>
             </div>
 
-            <div class="table-responsive">
-                <table class="table">
-                    <thead class=" text-primary">
-                    <th>#</th>
-                    <th>Accused ID</th>
-                    <th>Accused Full Name</th>
-                    <th>DOB</th>
-                    <th>Address</th>
-                    <th>City</th>
-                    <th>Gender</th>
-                    <th>Status</th>
-                    <th>Number of Crime</th>
-                    </thead>
-                    <tbody>
-                    @foreach($accuseddata as $index => $accused)
-                        <tr>
-                            <td>{{ ++$index }}</td>
-                            <td>{{$accused->accu_id}}</td>
-                            <td>{{$accused->accused_fullname}}</td>
-                            <td>{{$accused->address}}</td>
-                            <td>{{$accused->city}}</td>
-                            <td>{{$accused->contact_no}}</td>
-                            <td>{{$accused->gender}}</td>
-                            <td>{{$accused->status}}</td>
-                            <td>{{$accused->number_of_crime}}</td>
-                        </tr>
+{{--            <div class="table-responsive">--}}
+{{--                <table class="table">--}}
+{{--                    <thead class=" text-primary">--}}
+{{--                    <th>#</th>--}}
+{{--                    <th>Accused ID</th>--}}
+{{--                    <th>Accused Full Name</th>--}}
+{{--                    <th>DOB</th>--}}
+{{--                    <th>Address</th>--}}
+{{--                    <th>City</th>--}}
+{{--                    <th>Gender</th>--}}
+{{--                    <th>Status</th>--}}
+{{--                    <th>Number of Crime</th>--}}
+{{--                    </thead>--}}
+{{--                    <tbody>--}}
+{{--                    @foreach($accuseddata as $index => $accused)--}}
+{{--                        <tr>--}}
+{{--                            <td>{{ ++$index }}</td>--}}
+{{--                            <td>{{$accused->accu_id}}</td>--}}
+{{--                            <td>{{$accused->accused_fullname}}</td>--}}
+{{--                            <td>{{$accused->address}}</td>--}}
+{{--                            <td>{{$accused->city}}</td>--}}
+{{--                            <td>{{$accused->contact_no}}</td>--}}
+{{--                            <td>{{$accused->gender}}</td>--}}
+{{--                            <td>{{$accused->status}}</td>--}}
+{{--                            <td>{{$accused->number_of_crime}}</td>--}}
+{{--                        </tr>--}}
 
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
+{{--                    @endforeach--}}
+{{--                    </tbody>--}}
+{{--                </table>--}}
+{{--            </div>--}}
 
         </div>
     </div>
