@@ -82,6 +82,8 @@ Route::get('/r_fir', function () {return view('r_fir');});
 Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
 Route::get('/r_victim', function () {return view('r_victim');});
 Route::get('/view_wornted_p', function () {return view('view_wornted_p');});
+Route::get('/view_admin', function () {return view('view_admin');});
+Route::get('/r_police_entry_c', function () {return view('r_police_entry_c');});
 
 Route::get('/r_accused', 'AccusedController@index');
 Route::get('/r_petitioner', 'PetitionerController@index');
