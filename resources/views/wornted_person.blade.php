@@ -62,14 +62,7 @@
                             <input type="file" id="file-input" name="details" >
                         </div>
                     </div>
-                    <div class="form-group row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-6">
-                   
-                   <button type="button" class="btn btn-primary" onclick="update('update')">Update</button>
-               
-                </div>
-                </div>
+                    
                     
 
                 <div class="form-group row">
@@ -78,7 +71,7 @@
                    <button type="button" class="btn btn-primary" onclick="submit('submit')">Submit</button>
                     <button type="button" class="btn btn-primary" onclick="clear('clear')">Clear</button>
                     <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
+                    <button type="button" class="btn btn-primary" onclick="update('update')">Update</button>
                 </div>
                 </div>
                                         </div>

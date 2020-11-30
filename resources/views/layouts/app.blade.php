@@ -44,22 +44,17 @@
                 <li class="nav-item sidebar-dropdown">
                     <a class="nav-link" href="#">
                         <i class="material-icons">person</i>
-                        <p>ENTER </p>
+                        <p>ENTRY </p>
                     </a>
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
                                 <a class="nav-link nav-sub py-1" href="/avalability">
                                     <i class="material-icons">content_paste</i>
-                                    <p>ENTER Avalability</p>
+                                    <p>ENTRY Avalability</p>
                                 </a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/accused">
-                                    <i class="material-icons">content_paste</i>
-                                    <p>ENTER Registration </p>
-                                </a>
-                            </li>
+                            
                             <li class="nav-item ">
                                 <a class="nav-link nav-sub py-1" href="/r_entry_text">
                                     <i class="material-icons">content_paste</i>
@@ -73,9 +68,9 @@
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/wornted_person">
+                                <a class="nav-link nav-sub py-1" href="/view_wornted_p">
                                     <i class="material-icons">content_paste</i>
-                                    <p>ENTER Statement <p>
+                                    <p>REVIEW Wornted Person <p>
                                 </a>
                             </li>
                         </ul>

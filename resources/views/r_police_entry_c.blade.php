@@ -36,7 +36,6 @@
                 <div class="col-sm-6">
                    <button type="button" class="btn btn-primary" onclick="play('play')">Play</button>
                     <button type="button" class="btn btn-primary" onclick="stop('stop')">Stop</button>
-                    <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
                     <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
 
                     </form>
