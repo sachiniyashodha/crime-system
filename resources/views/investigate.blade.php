@@ -33,15 +33,7 @@
                     </div>
                     
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-4 label-column text-right">
-                        <label class="control-label" for="name-input-field">Officer lD : </label>
-                    </div>
-                    <div class="col-sm-6 ">  
-                        <input class="form-control" type="text" name="officer_id">
-                    </div>
-                    
-                </div>
+               
                 <div class="form-group row">
                     <div class="col-sm-4 label-column text-right"> 
                         <label class="control-label" for="name-input-field">Offiicer  Full Name :</label>
@@ -117,8 +109,19 @@
                                     <th>Date End</th>
                                     </thead>
                                     <tbody>
-                                        <!-- php -->
-                                    </tbody>
+                                    
+                                    @foreach($investigationdata as $index => $investigation)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$investigation->investigation_id}}</td>
+                                            <td>{{$investigation->case_id}}</td>
+                                            <td>{{$investigation->officer_fullname}}</td>
+                                            <td>{{$investigation->date_start}}</td>
+                                            <td>{{$investigation->date_end}}</td>
+                                        </tr>
+
+                                    @endforeach
+                                    </tbody>     
                                 </table>
                             </div>
                         </div>

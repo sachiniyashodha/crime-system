@@ -110,7 +110,10 @@
                    <button type="button" class="btn btn-primary" onclick="submit('submit')">Submit</button>
                     <button type="button" class="btn btn-primary" onclick="clear('clear')">Clear</button>
                     <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
-                    </div>
+                    <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
+                     <a type="back" href="/police_entry" class="btn btn-primary btn-block btn-lg btn-back">
+                                        Back
+                                    </a>
                                             </div>
                                         </div>
                                     </div>

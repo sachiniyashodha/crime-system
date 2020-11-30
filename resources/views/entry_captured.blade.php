@@ -54,10 +54,15 @@
                
                 
        
-                <div class="form-row">
+                <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6">
                 <button class="btn btn-primary" onclick="submit('submit')">Submit</button>
                     <button class="btn btn-primary" onclick="clear('clear')">Clear</button>
                     <button class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
+                    <a type="back" href="/police_entry" class="btn btn-primary btn-block btn-lg btn-back">
+                                        Back
+                                    </a>
                     </div>
        
         </div>

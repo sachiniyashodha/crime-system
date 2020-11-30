@@ -37,15 +37,11 @@
                     </div>
                 </div>
 
-                                <div class="form-group row">
-                                    <div class="col-sm-4"></div>
-                                    <div class="col-sm-6">
-                                <a class="btn-link btn-sub py-1" href="/police_entry">
-                                    <i class="material-icons">content_paste</i>
-                                    <p>Entry</p>
-                                </a>
-                            </li>
-                                    </div>
+                <div class="form-group">
+                                <div class="">
+                                    <a type="enter" href="/police_entry" class="btn btn-primary btn-block btn-lg btn-entry">
+                                        Entry
+                                    </a>
                                 </div>
                             </form>
                         </div>

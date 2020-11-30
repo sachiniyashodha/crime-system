@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+
 <div class="content">
         <div class="container-fluid">
 
@@ -24,17 +25,64 @@
                                     </icons-image>
                                 </div>
                             </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Person ID</th>
+                                <th>person Full Name</th>
+                                <th>Image </th>
+                                <th>Information </th>
+                                <th>Person Details</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cell 1</td>
+                                <td>Cell 2</td>
+                                <td>Cell 3</td>
+                                <td>Cell 4</td>
+                                <td>Cell 5</td>
+                            </tr>
+                            <tr>
+                                <td>Cell 3</td>
+                                <td>Cell 4</td>
+                                <td>Cell 3</td>
+                                <td>Cell 4</td>
+                                <td>Cell 5</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-               
-                    <div class="row">
-                          <div class="col-md-13">
-                     <p>Makandure Madush is an underworld leader and a drug kingpin, who led organized crime and drug trafficking in Sri Lanka. ... One of the notorious drug dealer and underworld kingpin operated in Colombo. He was arrested in Dubai along with Makandure Madush on 04-02-2019.</p>
-                     <input class="form-control" type="text" name="text" >
-                        </div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+                <div class="radio">
+                    <label> </label>
+                </div>
+                <div class="form-group has-warning"></div>
+                <div class="form-group"></div>
+
+                <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6">
+                   <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
+                   <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
+                    
                     </div>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+                 </div>
+                 </div>
+             </div>
+         </div>
+                                            
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+            
+    @endsection

@@ -81,6 +81,7 @@ Route::get('/r_entry_text', function () { return view('r_entry_text');});
 Route::get('/r_fir', function () {return view('r_fir');});
 Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
 Route::get('/r_victim', function () {return view('r_victim');});
+Route::get('/view_wornted_p', function () {return view('view_wornted_p');});
 
 Route::get('/r_accused', 'AccusedController@index');
 Route::get('/r_petitioner', 'PetitionerController@index');
@@ -99,8 +100,8 @@ Route::post('/victim/store', 'VictimController@store')->name('victim_forms');
 Route::get('/admin', function () {return view('admin');});
 
 
-Route::get('/wornted_person',  'VictimController@show');
-Route::post('/wornted_person/store', 'wornted_personFormController@store')->name('wornted_person_forms');
+Route::get('/wornted_person',  'WorntedPersonController@show');
+Route::post('/wornted_person/store', 'wornted_personFormController@store')->name('wornted_person_form');
 
 
 Route::get('/main', function () { return view('main');});

@@ -83,7 +83,7 @@ class CaseOutcomesController extends Controller
      */
     public function edit(case_outcomes $case_outcomes)
     {
-        //
+        // 
     }
 
     /**
@@ -95,7 +95,7 @@ class CaseOutcomesController extends Controller
      */
     public function update(Request $request, case_outcomes $case_outcomes)
     {
-        //
+        // 
     }
 
     /**
@@ -106,6 +106,6 @@ class CaseOutcomesController extends Controller
      */
     public function destroy(case_outcomes $case_outcomes)
     {
-        //
+        // 
     }
 }

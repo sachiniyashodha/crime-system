@@ -119,7 +119,20 @@
                                     <th>Gender</th>
                                     </thead>
                                     <tbody>
-                                        <!-- php -->
+                                    @foreach($admin_formdata as $index => $admin_form)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$admin_form->admin_id}}</td>
+                                            <td>{{$admin_form->officer_id}}</td>
+                                            <td>{{$admin_form->officer_name}}</td>
+                                            <td>{{$admin_form->rank}}</td>
+                                            <td>{{$admin_form->dob}}</td>
+                                            <td>{{$admin_form->address}}</td>
+                                            <td>{{$admin_form->contact_no}}</td>
+                                            <td>{{$admin_form->gender}}</td>
+                                        </tr>
+
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

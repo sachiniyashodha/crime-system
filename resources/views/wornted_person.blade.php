@@ -11,23 +11,20 @@
                             <h2 class="card-title"><strong>Wornted Person Form </strong></h2>
                         </div>
                         <div class="card-body pt-5 ">
+                            <form class="form-horizontal custom-form" method="POST" action="{{ route('wornted_person_form') }}">
+                            {{ csrf_field() }}
+                           
 
-                    <form class="form-horizontal custom-form" >
-{{--                        method="POST" action="{{ route('wornted_person_form') }}"--}}
-                    {{ csrf_field() }}
                     <div class="row">
-                    <div class="col-md-12">
-                    <div class="form-group row">
-                    <div class="col-sm-4 label-column text-right">
-            <div class="form-group row">
-                    <div class="col-sm-4 label-column text-right">
-                        <label class="control-label" for="name-input-field">Person ID : </label>
-                    </div>
-                    <div class="col-sm-6 ">  
-                        <input class="form-control" type="text" name="person_id">
-                    </div>
-                </div> 
-
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <div class="col-sm-4 label-column text-right">
+                                <label class="control-label" for="name-input-field">Person ID  : </label>
+                                </div>
+                                 <div class="col-sm-6 ">
+                                    <input class="form-control" type="text" name="accused_id" >
+                                    </div>
+                                </div>
                 <div class="form-group row">
                     <div class="col-sm-4 label-column text-right">
                         <label class="control-label" for="name-input-field">Person Name : </label>
@@ -37,25 +34,26 @@
                     </div>
                 </div>   
 
+                <div class="form- group row">
+                        <div class="col-sm-4 label-column text-right">
+                            <label class="control-label" for="email-input-field">Image </label>
+                            </div>
+                            <div class="col-sm-6 ">
+                            <input type="file" id="file-input" name="image" >
+                        </div>
+                    </div>
+                
 
                 <div class="form-group row">
-                    <div class="col-sm-4 label-column img-center">
-                        <label class="control-label" for="name-input-img src"> Image</label>
-                    </div>
-                    <div class="col-sm-6 ">  
-                        <//input class="form-control" type="text" name="person_name">
-                        <input class="form-control" type="img src" name="assets/img/a.jpg">
-                    </div>
-                </div> 
-
-                <div class="col-sm-2 label-column text-right">
-                        <label class="control-label col-form-label-lg pt-1" for="email-input-field">Information : </label>
+                    <div class="col-sm-4 label-column text-right">
+                        <label class="control-label" for="name-input-field">Information : </label>
                         </div>
-                        <div class="col-sm-3 ">
+                        <div class="col-sm-6 ">
                         <textarea class="form-control form-control-lg" name="information"></textarea>
-                        </div>
-                        </div> 
-           
+                                 </div>
+                             </div>
+
+                
                 <div class="form- group row">
                         <div class="col-sm-4 label-column text-right">
                             <label class="control-label" for="email-input-field">Detail </label>

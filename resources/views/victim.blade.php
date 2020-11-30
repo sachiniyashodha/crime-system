@@ -11,10 +11,8 @@
                             <h2 class="card-title"><strong>Victim Form </strong></h2>
                         </div>
                         <div class="card-body pt-5 ">
-
-                    <form class="form-horizontal custom-form" >
-{{--                        method="POST" action="{{ route('victim_form') }}"--}}
-                    {{ csrf_field() }}
+                            <form class="form-horizontal custom-form" method="POST" action="{{ route('victim_forms') }}">
+                            {{ csrf_field() }}
                     <div class="row">
                     <div class="col-md-12">
                     <div class="form-group row">
@@ -151,7 +149,19 @@
                                     <th>Details</th>
                                     </thead>
                                     <tbody>
-                                        <!-- php -->
+                                    @foreach($victimrdata as $index => $victim)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$victim->victim_id}}</td>
+                                            <td>{{$victim->victim_fullname}}</td>
+                                            <td>{{$victim->address}}</td>
+                                            <td>{{$victim->city}}</td>
+                                            <td>{{$victim->contact_no}}</td>
+                                            <td>{{$victim->gender}}</td>
+                                            <td>{{$victim->details}}</td>
+                                        </tr>
+                                    @endforeach 
+                                    </tbody>               
                                 </table>
                             </div>
                         </div>
@@ -162,32 +172,32 @@
         </div>
     </div>
 
-     <!--Modal-->
-     <div id="deleteVictimModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Alerts</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form name="delete_victim_form" >
-{{--                    method="POST" action="{{ route('delete_victim') }}"--}}
-                    {{ csrf_field() }}
-                    <input type="hidden" name="delete_victim_id" id="delete_victim_id" >
-                    <div class="modal-body">
-                        <p>Are you sure you want to delete this victim?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Delete</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
+ Modal
+     <!-- <div id="deleteVictimModal" class="modal" tabindex="-1" role="dialog"> -->
+        <!-- <div class="modal-dialog" role="document"> -->
+            <!-- <div class="modal-content"> -->
+                <!-- <div class="modal-header"> -->
+                    <!-- <h5 class="modal-title">Alerts</h5> -->
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                    <!-- </button> -->
+                <!-- </div> -->
+                <!-- <form name="delete_victim_form" > -->
+<!-- {{--                    method="POST" action="{{ route('delete_victim') }}"--}} -->
+                    <!-- {{ csrf_field() }} -->
+                    <!-- <input type="hidden" name="delete_victim_id" id="delete_victim_id" > -->
+                    <!-- <div class="modal-body"> -->
+                        <!-- <p>Are you sure you want to delete this victim?</p> -->
+                    <!-- </div> -->
+                    <!-- <div class="modal-footer"> -->
+                        <!-- <button type="submit" class="btn btn-primary">Delete</button> -->
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <!-- </div> -->
+                <!-- </form> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+<!--  -->
 
 
 
