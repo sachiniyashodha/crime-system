@@ -236,7 +236,7 @@
                     <div class="sidebar-submenu">
                         <ul class="nav">
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/view_admin">
+                                <a class="nav-link nav-sub py-1" href="/add_admin">
                                     <i class="material-icons">content_paste</i>
                                     <p>Add Administratr</p>
                                 </a>
@@ -248,7 +248,7 @@
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link nav-sub py-1" href="/view_admin">
+                                <a class="nav-link nav-sub py-1" href="/delete_admin">
                                     <i class="material-icons">content_paste</i>
                                     <p>Delete Administratr</p>
                                 </a>

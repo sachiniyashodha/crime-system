@@ -119,7 +119,7 @@
                                     <th>Gender</th>
                                     </thead>
                                     <tbody>
-                                    @foreach($admin_formdata as $index => $admin_form)
+                                    @foreach($adminformdata as $index => $admin_form)
                                         <tr>
                                             <td>{{ ++$index }}</td>
                                             <td>{{$admin_form->admin_id}}</td>

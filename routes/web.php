@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
+//Route::get('/home', function () {
+//    return view('home');
+//});
 
 Route::get('/goal', function () {
     return view('main');
@@ -71,9 +71,11 @@ Route::post('/entry_text/store', 'EntryTextController@store')->name('entrytext_f
 Route::get('/crime_file', 'CrimeFileController@show');
 Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_forms');
 
-Route::get('/avalability', function () {
-    return view('avalability');
-});
+
+Route::get('/avalability', 'AvalabilityController@index')->name('avalability');
+
+//Route::get('/avalability', 'AvalabilityController@index');
+//Route::get('/avalability', 'AvalabilityController@search');
 
 Route::get('/r_case_outcome', function () {return view('r_case_outcome');});
 Route::get('/r_case', function () { return view('r_case');});
@@ -84,6 +86,7 @@ Route::get('/r_victim', function () {return view('r_victim');});
 Route::get('/view_wornted_p', function () {return view('view_wornted_p');});
 Route::get('/view_admin', function () {return view('view_admin');});
 Route::get('/r_police_entry_c', function () {return view('r_police_entry_c');});
+
 
 Route::get('/r_accused', 'AccusedController@index');
 Route::get('/r_petitioner', 'PetitionerController@index');

@@ -76,7 +76,8 @@ class AdminFormController extends Controller
      */
     public function show(admin_form $admin_form)
     {
-        //
+        $adminformdata = admin_form::all();
+        return view('add_admin', ['adminformdata' => $adminformdata]);
     }
 
     /**
