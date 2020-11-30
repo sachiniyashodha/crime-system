@@ -15,10 +15,10 @@ class EntryTextController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-//    public function index()
-//    {
-//        //
-//    }
+    public function index()
+    {
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -80,9 +80,7 @@ class EntryTextController extends Controller
     public function show()
     {
        $entrytextdata = entry_text::all();
-           return view('entry_text', [
-               'entrytextdata' => $entrytextdata,
-           ]);
+       return view('entry_text', ['entrytextdata' => $entrytextdata,]);
     }
 
     /**

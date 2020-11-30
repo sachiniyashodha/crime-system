@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\accused;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class AvalabilityController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View
+     */
     public function index()
     {
         return view('avalability');
@@ -14,9 +18,17 @@ class AvalabilityController extends Controller
 
     public function search()
     {
-        $search_text = $_GET['query'];
-        $accuseds = accused::Where('accused_id','Like','%'.$search_text.'%')->get();
+        // $search_text = $_GET['query'];
+        $search = request()->query('query');
+        $accuseds = accused::where('accu_id','Like','%'.$search.'%')->get();
 
-        return view('accuseds.search' ,compact('accuseds'));
+        return view('avalability',compact('accuseds'));
+    }
+
+    public function show(accused $accused)
+    {
+        $accuseddata = accused::all();
+        return view('avalability', ['accuseddata' => $accuseddata]);
+
     }
 }

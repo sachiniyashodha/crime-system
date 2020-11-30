@@ -12,7 +12,7 @@
                         <div class="card-header card-header-primary">
                             <h2 class="card-title"><strong>AVALABILITY </strong></h2>
                         </div>
-                        <form class="form-horizontal custom-form" method="GET" action="{{ route('avalability') }}">
+                        <form class="form-horizontal custom-form" method="GET" action="{{ url('/avalability') }}">
                             {{ csrf_field() }}
                             <div class="card-body my-4 mx-auto col-sm-12">
                                 <div class="row">
@@ -39,6 +39,38 @@
                         </form>
                     </div>
                 </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-primary">
+                    <th>#</th>
+                    <th>Accused ID</th>
+                    <th>Accused Full Name</th>
+                    <th>DOB</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Number of Crime</th>
+                    </thead>
+                    <tbody>
+                    @foreach($accuseddata as $index => $accused)
+                        <tr>
+                            <td>{{ ++$index }}</td>
+                            <td>{{$accused->accu_id}}</td>
+                            <td>{{$accused->accused_fullname}}</td>
+                            <td>{{$accused->address}}</td>
+                            <td>{{$accused->city}}</td>
+                            <td>{{$accused->contact_no}}</td>
+                            <td>{{$accused->gender}}</td>
+                            <td>{{$accused->status}}</td>
+                            <td>{{$accused->number_of_crime}}</td>
+                        </tr>
+
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
 
         </div>

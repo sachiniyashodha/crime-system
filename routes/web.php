@@ -72,10 +72,10 @@ Route::get('/crime_file', 'CrimeFileController@show');
 Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_forms');
 
 
-Route::get('/avalability', 'AvalabilityController@index')->name('avalability');
+Route::get('/avalability', 'AvalabilityController@index');
+Route::get('/avalability', 'AvalabilityController@search');
+Route::get('/avalability', 'AvalabilityController@show');
 
-//Route::get('/avalability', 'AvalabilityController@index');
-//Route::get('/avalability', 'AvalabilityController@search');
 
 Route::get('/r_case_outcome', function () {return view('r_case_outcome');});
 Route::get('/r_case', function () { return view('r_case');});
