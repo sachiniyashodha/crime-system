@@ -46,7 +46,7 @@ class EntryTextController extends Controller
                 'time'              => 'nullable|max:15|string',
                 'fir_no'            => 'required|string|max:250',
                 'police_entry'      => 'required|string|max:250',
-                'details'           => 'required|string|max:250',
+                'detail'           => 'required|string|max:250',
         ]);
 
         if($add_data->fails()){
@@ -58,17 +58,15 @@ class EntryTextController extends Controller
                 'branch_name'  => request()->has('branch_name' )? request('branch_name'  ) : null,
                 'date'         => request()->has('date'        )? request('date'         ) : null,
                 'time'         => request()->has('time'        )? request('time'         ) : null,
-                'fir_no'       => request()->has('fir_no'      )? request('fir_no'       ) : null,
+                'fir_id'       => request()->has('fir_no'      )? request('fir_no'       ) : null,
                 'police_entry' => request()->has('police_entry')? request('police_entry' ) : null,
-                'details'      => request()->has('details'     )? request('details'      ) : null,
-
+                'other_details'=> request()->has('detail'     )? request('detail'      ) : null,
             ];
             entry_text::create($toInsert);
         }
         return  redirect()->back()->withInput()->withErrors("added successfully!");
-//         $add_data = request()->all();
+//        $add_data = request()->all();
 //        dd($add_data);
-//        echo "hello world";
     }
 
     /**

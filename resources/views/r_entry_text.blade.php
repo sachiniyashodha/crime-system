@@ -1,91 +1,83 @@
 @extends('layouts.app')
 @section('content')
     
-<div class="content">
+    <div class="content">
         <div class="container-fluid">
-
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <h2 class="card-title"><strong>ENTRY VIEW TABLE </strong></h2>
                         </div>
-
-    
                         <div class="card-body">
-                            <div class="row py-4">
-                                <div class="col-sm-3 pr-0">
-                                    <input class="form-control" id="searchdata" type="text" placeholder="Search..">
+                                <div class="row">
+                                    <div class="col-sm-1 py-4 px-0 text-right">
+                                        <label for="search-input">Enter ID Number :</label>
+                                    </div>
+                                    <div class="col-sm-4 pt-2 ">
+                                        <div class="form-group has-error has-feedback">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <span> <i class="glyphicon glyphicon-search"></i></span>
+                                                </div>
+                                                <input class="form-control" type="search" name="search" id="search-input">
+                                            </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7 py-4 text-right">
+                                        <button type="button" class="btn btn-primary" onclick="printDiv()">Print</button>
+                                        <a type="button" class="btn btn-primary text-white" herf="#">Bank</a>
+                                    </div>
                                 </div>
-                                <div class="col-1 pt-2 ">
-                                    <icons-image _ngcontent-ebe-c22="" _nghost-ebe-c19="">
-                                        <span _ngcontent-ebe-c19="" class="material-icons icon-image-preview">search</span>
-                                    </icons-image>
+                                <div class="table-responsive" id="printableTable">
+                                    <table class="table" data-show-print="true" data-url="json/data1.json">
+                                        <thead>
+                                            <tr>
+                                                <th>Reference number</th>
+                                                <th>Branch name</th>
+                                                <th>Date </th>
+                                                <th>Time </th>
+                                                <th>Petitioner id </th>
+                                                <th>Police entry text</th>
+                                                <th>Other details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cell 1</td>
+                                                <td>Cell 2</td>
+                                                <td>Cell 3</td>
+                                                <td>Cell 4</td>
+                                                <td>Cell 5</td>
+                                                <td>Cell 6</td>
+                                                <td>Cell 7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 3</td>
+                                                <td>Cell 4</td>
+                                                <td>Cell 3</td>
+                                                <td>Cell 4</td>
+                                                <td>Cell 5</td>
+                                                <td>Cell 6</td>
+                                                <td>Cell 7</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
                                 </div>
                             </div>
-                <label for="search-input">Enter ID Number :</label>
-                <div class="form-group has-error has-feedback">
-                    <div class="input-group">
-                        <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
-                        <input class="form-control" type="search" name="search" id="search-input">
-                    </div><i class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></i></div>
-    
-    
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Reference number</th>
-                                <th>Branch name</th>
-                                <th>Date </th>
-                                <th>Time </th>
-                                <th>Petitioner id </th>
-                                <th>Police entry text</th>
-                                <th>Other details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 5</td>
-                                <td>Cell 6</td>
-                                <td>Cell 7</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 5</td>
-                                <td>Cell 6</td>
-                                <td>Cell 7</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="radio">
-                    <label> </label>
-                </div>
-                <div class="form-group has-warning"></div>
-                <div class="form-group"></div>
-
-                <div class="form-group row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-6">
-
-                   <button type="button" class="btn btn-primary" onclick="copy('copy')">Copy</button>
-                   <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
-                
-
-            </form>
+            </div>
         </div>
-    </div>
-@endsection
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+{{--        <script src="{{ asset('js/bootstrap-table-print.js') }}"></script>--}}
+        <script>
+            function printDiv() {
+                window.frames["print_frame"].document.body.innerHTML = document.getElementById("printableTable").innerHTML;
+                window.frames["print_frame"].window.focus();
+                window.frames["print_frame"].window.print();
+            }
+        </script>
+    @endsection

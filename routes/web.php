@@ -63,7 +63,7 @@ Route::get('/delete_admin', function () {return view('delete_admin');});
 Route::post('/delete_admin/store', 'delete_adminController@store')->name('delete_admin_forms');
 
 Route::get('/entry_captured', function () {return view('entry_captured');});
-Route::post('/entry_captured/store', 'entry_capturedController@store')->name('entry_captured_forms');
+Route::post('/entry_captured/store', 'EntrycapturedController@store')->name('entry_captured_forms');
 
 Route::get('/entry_text', 'EntryTextController@show');
 Route::post('/entry_text/store', 'EntryTextController@store')->name('entrytext_form');
@@ -105,8 +105,9 @@ Route::post('/victim/store', 'VictimController@store')->name('victim_forms');
 Route::get('/admin', function () {return view('admin');});
 
 
+Route::get('/view_wornted_p',  'WorntedPersonController@index');
 Route::get('/wornted_person',  'WorntedPersonController@show');
-Route::post('/wornted_person/store', 'wornted_personFormController@store')->name('wornted_person_form');
+Route::post('/wornted_person/store', 'WorntedPersonController@store')->name('wornted_person_form');
 
 
 Route::get('/main', function () { return view('main');});

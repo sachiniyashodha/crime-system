@@ -10,7 +10,7 @@ class Entrycaptured extends Model
         'id',
         'cr_id',
         'reference_no',
-        'record'
+        'record',
     
     ];
 }

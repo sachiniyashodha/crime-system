@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\wornted_person;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class WorntedPersonController extends Controller
 {
@@ -42,24 +43,25 @@ class WorntedPersonController extends Controller
                 'images'             => 'required|string|max:250',
                 'information'        => 'required|string|max:250',
                 'details'            => 'required|string|max:250',
-                ]);
-   //  dd($add_data);
+            ]);
 
-   if($add_data->fails()){
-    $add_data->errors()->add('from', 'ADD');
-}else{
-    $toInsert = [  //Todo : Get the Confirmation for validations
-        'person_id'     => request()->has('person_id'   )? request('person_id'  ) : null,
-        'person_name'   => request()->has('person_name' )? request('person_name') : null,
-        'images'        => request()->has('image'       )? request('image'      ) : null,
-        'information'   => request()->has('information' )? request('information') : null,
-        'details'       => request()->has('details'     )? request('details'    ) : null,
- 
-    ];
-    wornted_person::create($toInsert);
-}
-return redirect()->back()->withInput()->withErrors("hello world");
-}
+            if($add_data->fails()){
+                $add_data->errors()->add('from', 'ADD');
+            }else{
+                $toInsert = [  //Todo : Get the Confirmation for validations
+                    'person_id'     => request()->has('person_id'   )? request('person_id'  ) : null,
+                    'person_name'   => request()->has('person_name' )? request('person_name') : null,
+                    'images'        => request()->has('images'      )? request('images'      ) : null,
+                    'information'   => request()->has('information' )? request('information') : null,
+                    'details'       => request()->has('details'     )? request('details'    ) : null,
+                ];
+                wornted_person::create($toInsert);
+            }
+            return redirect()->back()->withInput()->withErrors("hello world");
+
+            //$add_data = request()->all();
+            //dd($add_data);
+    }
 
     /**
      * Display the specified resource.

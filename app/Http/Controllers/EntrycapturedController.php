@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Entrycaptured;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class EntrycapturedController extends Controller
 {
@@ -36,20 +38,18 @@ class EntrycapturedController extends Controller
     public function store(Request $request)
     {
         $add_data = Validator::make(request()->all(),[
-            'id'             => 'required',
             'cr_id'          => 'required|required|string|max:250',
             'reference_no'   => 'required|string|max:250',
-            'record'         => 'required|string|max:250',
+            'detail'         => 'required|string|max:250',
         ]);
 
         if($add_data->fails()){
             $add_data->errors()->add('from', 'ADD');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'id'              => request()->has('id'          )? request('id'           ) : null,
                 'cr_id'           => request()->has('cr_id'       )? request('cr_id'        ) : null,
                 'reference_no'    => request()->has('reference_no')? request('reference_no' ) : null,
-                'record'          => request()->has('record'      )? request('record'       ) : null,
+                'record'          => request()->has('detail'      )? request('detail'       ) : null,
             ];
             Entrycaptured::create($toInsert);
         }
@@ -66,10 +66,10 @@ class EntrycapturedController extends Controller
     public function show(Entrycaptured $entrycaptured)
     {
         
-        $Entrycaptureddata = Entrycaptured::all();
-        return view('Entrycaptured', [
-            'Entrycaptureddata' => $Entrycaptureddata,
-        ]);
+//        $Entrycaptureddata = Entrycaptured::all();
+//        return view('Entrycaptured', [
+//            'Entrycaptureddata' => $Entrycaptureddata,
+//        ]);
     
     }
 
