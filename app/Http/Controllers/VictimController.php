@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\petitioner;
 use App\victim;
+use App\wornted_person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -39,28 +40,27 @@ class VictimController extends Controller
     {
         $add_data = Validator::make(request()->all(),[
             'victim_id'         => 'required',
-            'victim_fullname'   => 'required|string|max:250',
+            'victim_name'   => 'required|string|max:250',
             'address'           => 'required|string|max:250',
             'city'              => 'required|string|max:250',
             'contact_no'        => 'nullable|max:15|string',
-            'candition'         => 'required|string|max:250',
+            'status'         => 'required|string|max:250',
             'gender'            => 'required|string|max:250',
-            'details'           => 'required|string|max:250',
-
+            'detail'           => 'required|string|max:250',
         ]);
 
         if($add_data->fails()){
             $add_data->errors()->add('from', 'ADD');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'victim_id'       => request()->has('victim_id'         )? request('victim_id'         ) : null,
-                'victim_fullname' => request()->has('victim_fullname'   )? request('victim_fullname'   ) : null,
-                'address'         => request()->has('petitioner_address')? request('petitioner_address') : null,
-                'city'            => request()->has('city'              )? request('city'              ) : null,
-                'contact_no'      => request()->has('contact_no'        )? request('contact_no'        ) : null,
-                'candition'       => request()->has('candition'         )? request('candition'         ) : null,
-                'gender'          => request()->has('canplan'           )? request('canplan'           ) : null,
-                'details'         => request()->has('details'           )? request('details'           ) : null,
+                'victim_id'       => request()->has('victim_id'   )? request('victim_id'   ) : null,
+                'victim_fullname' => request()->has('victim_name' )? request('victim_name' ) : null,
+                'address'         => request()->has('address'     )? request('address'     ) : null,
+                'city'            => request()->has('city'        )? request('city'        ) : null,
+                'contact_no'      => request()->has('contact_no'  )? request('contact_no'  ) : null,
+                'condition'       => request()->has('status'      )? request('status'      ) : null,
+                'gender'          => request()->has('gender'      )? request('gender'      ) : null,
+                'details'         => request()->has('detail'     )? request('detail'      ) : null,
 
             ];
             victim::create($toInsert);
@@ -76,7 +76,8 @@ class VictimController extends Controller
      */
     public function show(victim $victim)
     {
-        //
+        $victimdata = victim::all();
+        return view('victim', ['victimdata' => $victimdata]);
     }
 
     /**

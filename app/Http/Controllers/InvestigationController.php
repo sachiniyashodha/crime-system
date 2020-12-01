@@ -52,7 +52,7 @@ class InvestigationController extends Controller
                 'investigation_id'    => request()->has('investigation_id'  )? request('investigation_id'  ) : null,
                 'case_id'             => request()->has('case_id'           )? request('case_id'           ) : null,
                 'officer_fullname'    => request()->has('officer_fullname'  )? request('officer_fullname'  ) : null,
-                'date_start'          => request()->has('officer_id'        )? request('officer_id'        ) : null,
+                'date_start'          => request()->has('date_start'        )? request('date_start'        ) : null,
                 'date_end'            => request()->has('date_end'          )? request('date_end'          ) : null,
             ];
             investigation::create($toInsert);

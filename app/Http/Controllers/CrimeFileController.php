@@ -45,7 +45,7 @@ class CrimeFileController extends Controller
             'date_of_incident'   => 'required|string|max:250',
             'time_of_incident'   => 'required|string|max:250',
             'date_filr'          => 'required|string|max:250',
-            'accused_status'     => 'required',
+            'status'     => 'required',
         ]);
 
         if($add_data->fails()){
@@ -56,11 +56,11 @@ class CrimeFileController extends Controller
                 'accused_id'        => request()->has('accused_id'   )? request('accused_id'   ) : null,
                 'victim_id'         => request()->has('victim_id'    )? request('victim_id'    ) : null,
                 'petitioner_id'     => request()->has('petitioner_id')? request('petitioner_id') : null,
-                'place_of_incident' => request()->has('contact_no'   )? request('contact_no'   ) : null,
-                'date_of_incident'  => request()->has('canplan'      )? request('canplan'      ) : null,
-                'time_of_incident'  => request()->has('canplan'      )? request('canplan'      ) : null,
-                'date_filr'         => request()->has('details'      )? request('details'      ) : null,
-                'accused_status'    => request()->has('officer_id'   )? request('officer_id'   ) : null,
+                'place_of_incident' => request()->has('place_of_incident'   )? request('place_of_incident'   ) : null,
+                'date_of_incident'  => request()->has('date_of_incident'      )? request('date_of_incident'      ) : null,
+                'time_of_incident'  => request()->has('time_of_incident'      )? request('time_of_incident'      ) : null,
+                'date_filr'         => request()->has('date_filr'      )? request('date_filr'      ) : null,
+                'accused_status'    => request()->has('status'   )? request('status'   ) : null,
             ];
             crime_file::create($toInsert);
         }
