@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\admin_form;
+use App\entry_text;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -111,6 +112,8 @@ class AdminFormController extends Controller
      */
     public function destroy(admin_form $admin_form)
     {
-        //
+        $id = request('delete_id');
+        admin_form::where('admin_id', $id)->delete();
+        return redirect()->back();
     }
 }

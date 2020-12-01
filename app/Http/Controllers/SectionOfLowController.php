@@ -68,7 +68,8 @@ class SectionOfLowController extends Controller
      */
     public function show(section_of_low $section_of_low)
     {
-        //
+        $sectionoflowdata = section_of_low::all();
+        return view('section_of_low', ['sectionoflowdata' => $sectionoflowdata,]);
     }
 
     /**

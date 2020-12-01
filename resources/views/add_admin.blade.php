@@ -111,12 +111,12 @@
                                     <th>Admin ID</th>
                                     <th>Officer ID</th>
                                     <th>Officer Name</th>
-                                    <th>Address</th>
                                     <th>rank</th>
                                     <th>DOB</th>
                                     <th>Address</th>
                                     <th>Contact No</th>
                                     <th>Gender</th>
+                                    <th>Action</th>
                                     </thead>
                                     <tbody>
                                     @foreach($adminformdata as $index => $admin_form)
@@ -130,6 +130,14 @@
                                             <td>{{$admin_form->address}}</td>
                                             <td>{{$admin_form->contact_no}}</td>
                                             <td>{{$admin_form->gender}}</td>
+                                            <td>
+                                                <a type="button" class="btn btn-warning text-white" onclick="submit('submit')">View</a>
+                                                <form method="POST" class="delete_form"  id="delete_id" action="{{route('delete_admin', $admin_form['admin_id'])}}">
+                                                    {{csrf_field()}}
+                                                    <input hidden id="delete_id" name="delete_id" value="{{$admin_form->admin_id}}">
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
 
                                     @endforeach
@@ -143,5 +151,20 @@
 
         </div>
     </div>
-    
+
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $('.delete_form').on('submit', function(){
+                if(confirm("Are you sure you want to delete it?"))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            });
+        });
+    </script>
  @endsection

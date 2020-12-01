@@ -42,7 +42,7 @@ Route::post('/create', 'Auth\RegisterController@store')->name('register');
 
 Route::get('/add_admin', 'AdminFormController@show');
 Route::post('/add_admin/store', 'AdminFormController@store')->name('admin_forms');
-//Route::post('/add_admin/delete', 'AdminFormController@delete')->name('delete_admin');
+Route::post('/add_admin/destroy', 'AdminFormController@destroy')->name('delete_admin');
 
 
 Route::get('/petitioner', 'PetitionerController@show');
