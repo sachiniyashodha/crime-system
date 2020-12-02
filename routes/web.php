@@ -11,16 +11,6 @@
 |
 */
 
-//Route::get('/home', function () {
-//    return view('home');
-//});
-
-//Route::get(‘alert/AlertType’,’sweetalertController@alert’)->name(‘alert’);
-
-//Route::get('/goal', function () {
-//    return view('main');
-//});
-
 Route::get('/police_entry', function () {
     return view('police_entry');
 });
