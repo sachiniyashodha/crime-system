@@ -15,9 +15,11 @@
 //    return view('home');
 //});
 
-Route::get('/goal', function () {
-    return view('main');
-});
+//Route::get(‘alert/AlertType’,’sweetalertController@alert’)->name(‘alert’);
+
+//Route::get('/goal', function () {
+//    return view('main');
+//});
 
 Route::get('/police_entry', function () {
     return view('police_entry');
@@ -110,7 +112,7 @@ Route::get('/wornted_person',  'WorntedPersonController@show');
 Route::post('/wornted_person/store', 'WorntedPersonController@store')->name('wornted_person_form');
 
 
-Route::get('/main', function () { return view('main');});
+//Route::get('/main', function () { return view('main');});
 Route::get('/dashboard', function () {return view('dashboard');});
 
 

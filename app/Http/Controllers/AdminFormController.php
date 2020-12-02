@@ -66,7 +66,9 @@ class AdminFormController extends Controller
             ];
             admin_form::create($toInsert);
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
+//        return  redirect()->back()->withInput()->withErrors("hello world");
+
+        return redirect('add_admin')->with('success', 'You are successfully');
     }
 
     /**

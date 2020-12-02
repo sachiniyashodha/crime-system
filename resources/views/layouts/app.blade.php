@@ -8,7 +8,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Crime Management System') }}</title>
+    <title>Crime Management System</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -25,7 +25,7 @@
 </head>
 
 <body class="mani-image">
-<div class="wrapper">
+<div class="wrapper" id="app">
     <div class="sidebar" data-color="purple" data-background-color="white">
 
         <div class="logo">
@@ -273,48 +273,77 @@
                     <span class="navbar-toggler-icon icon-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end">
-                    <form class="navbar-form">
-                        <div class="input-group no-border">
-                            <input type="text" value="" class="form-control" placeholder="Search...">
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>
-                        </div>
-                    </form>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:;">
-                                <i class="material-icons">dashboard</i>
-                                <p class="d-lg-none d-md-block">
-                                    Stats
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="d-lg-none d-md-block">
-                                    Some Actions
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">person</i>
-                                <p class="d-lg-none d-md-block">
-                                    Account
-                                </p>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
-                            </div>
-                        </li>
+
+{{--                    <form class="navbar-form">--}}
+{{--                        <div class="input-group no-border">--}}
+{{--                            <input type="text" value="" class="form-control" placeholder="Search...">--}}
+{{--                            <button type="submit" class="btn btn-white btn-round btn-just-icon">--}}
+{{--                                <i class="material-icons">search</i>--}}
+{{--                                <div class="ripple-container"></div>--}}
+{{--                            </button>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline-block;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                     </ul>
+{{--                    <ul class="navbar-nav">--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="javascript:;">--}}
+{{--                                <i class="material-icons">dashboard</i>--}}
+{{--                                <p class="d-lg-none d-md-block">--}}
+{{--                                    Stats--}}
+{{--                                </p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item dropdown">--}}
+{{--                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                <i class="material-icons">notifications</i>--}}
+{{--                                <span class="notification">5</span>--}}
+{{--                                <p class="d-lg-none d-md-block">--}}
+{{--                                    Some Actions--}}
+{{--                                </p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item dropdown">--}}
+{{--                            <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                <i class="material-icons">person</i>--}}
+{{--                                <p class="d-lg-none d-md-block">--}}
+{{--                                    Account--}}
+{{--                                </p>--}}
+{{--                            </a>--}}
+{{--                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">--}}
+{{--                                <a class="dropdown-item" href="#">Profile</a>--}}
+{{--                                <a class="dropdown-item" href="#">Settings</a>--}}
+{{--                                <div class="dropdown-divider"></div>--}}
+{{--                                <a class="dropdown-item" href="#">Log out</a>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
                 </div>
             </div>
         </nav>
@@ -329,10 +358,8 @@
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright float-right">
-                    CRIME MANAGEMENT SYSTEM &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
+                    CRIME MANAGEMENT SYSTEM &copy; 2020
+
                 </div>
                 <!-- your footer here -->
             </div>
@@ -340,13 +367,13 @@
     </div>
 </div>
 
-
+<script src="{{ asset('js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 {{--<script src="{{ asset('js/jquery.datatables.min.js') }}"></script>--}}
 <script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.js') }}"></script>
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+
 <script src="{{ asset('js/script.js') }}"></script>
 
 

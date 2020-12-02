@@ -9,6 +9,7 @@
                         <div class="card-header card-header-primary">
                             <h2 class="card-title"><strong>Admin Form </strong></h2>
                         </div>
+
                         <div class="card-body pt-5 ">
                             <form class="form-horizontal custom-form" method="POST" action="{{ route('admin_forms') }}">
                             {{ csrf_field() }}
