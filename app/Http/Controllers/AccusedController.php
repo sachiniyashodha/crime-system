@@ -54,7 +54,7 @@ class AccusedController extends Controller
             return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'accused_id'       => request()->has('accused_id'      )? request('accused_id'      ) : null,
+                'accu_id'          => request()->has('accused_id'      )? request('accused_id'      ) : null,
                 'accused_fullname' => request()->has('accused_fullname')? request('accused_fullname') : null,
                 'dob'              => request()->has('date_of_birth'   )? request('date_of_birth'   ) : null,
                 'address'          => request()->has('address'         )? request('address'         ) : null,
