@@ -5,8 +5,8 @@
         <div class="card-body pt-5 ">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div class="jumbotron hero-technology">
-                        <h1 class="hero-title"><strong>CRIME MANAGEMENT SYSTEM</strong></h1>
+                    <div class="jumbotron hero-technology ">
+                        <h1 class="hero-title"><strong>CRIME MANAGEMENT SYSTEM </strong></h1>
                         <h2>Speeds up Real Time Crime Traking. </h2>
                         <h2>User Experience Focused. </h2>
                         <h2>Easy to work with Database. </h2>
@@ -44,16 +44,18 @@
                 <div class="card-body pt-5 ">
                     <div class="row">
                         <div class="">
-                            <h1 class="text-center">Functionalities:- </h1>
+                            <h1 class="text-center">FUNCTIONS</h1>
+                            <h4 class="text-left">Data Entry in Easy Manner. </h4>
+                            <h4 class="text-left">Criminal's List Across All Over The Nation. </h4>
+                             <h4 class="text-left">Valuable Officer's List. </h4>
+                            <h4 class="text-left">Tracking of Crimes In Different City. </h4>
+                            <h4 class="text-left">Real-time Case Progress Analysis. </h4>
                         </div>
                     </div>
                     <div class="row">
                         <hr>
-                        <h4 class="text-left">Data Entry in Easy Manner. </h4>
-                        <h4 class="text-left">Criminal's List Across All Over The Nation. </h4>
-                        <h4 class="text-left">Valuable Officer's List. </h4>
-                        <h4 class="text-left">Tracking of Crimes In Different City. </h4>
-                        <h4 class="text-left">Real-time Case Progress Analysis. </h4>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -61,7 +63,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body pt-5 ">
-                    <h1 class="text-center">Police News</h1><img src="{{ asset('img/criminalimg.png') }}">
+                    <h1 class="text-center">POLICE NEWS</h1><img src="{{ asset('img/criminalimg.png') }}">
                     <blockquote>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                         <div>Someone famous</div>

@@ -17,7 +17,8 @@ class VictimController extends Controller
      */
     public function index()
     {
-        //
+        $victimdata = victim::all();
+        return view('r_victim', [ 'victimdata' => $victimdata]);
     }
 
     /**

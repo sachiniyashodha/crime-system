@@ -35,28 +35,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($crimefiledata as $index =>$crime_file)
                                         <tr>
-                                            <td>Cell 1</td>
-                                            <td>Cell 2</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 5</td>
-                                            <td>Cell 6</td>
-                                            <td>Cell 7</td>
-                                            <td>Cell 7</td>
-                                            <td>Cell 9</td>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$crime_file->fir_no}}</td>
+                                            <td>{{$crime_file->accused_id}}</td>
+                                            <td>{{$crime_file->victim_id}}</td>
+                                            <td>{{$crime_file->petitioner_id}}</td>
+                                            <td>{{$crime_file->place_of_incident}}</td>
+                                            <td>{{$crime_file->date_of_incident}}</td>
+                                            <td>{{$crime_file->time_of_incident}}</td>
+                                            <td>{{$crime_file->date_filr}}</td>
+                                            <td>{{$crime_file->accused_status}}</td>
+
+                                           
                                         </tr>
-                                        <tr>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 5</td>
-                                            <td>Cell 6</td>
-                                            <td>Cell 7</td>
-                                            <td>Cell 7</td>
-                                            <td>Cell 9</td>
-                                        </tr>
+                                    @endforeach  
                                     </tbody>
                                 </table>
                             </div>

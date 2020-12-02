@@ -17,7 +17,8 @@ class SectionOfLowController extends Controller
      */
     public function index()
     {
-        //
+        $sectionoflowdata = section_of_low::all();
+        return view('r_section_of_low', [ 'sectionoflowdata' => $sectionoflowdata]);
     }
 
     /**

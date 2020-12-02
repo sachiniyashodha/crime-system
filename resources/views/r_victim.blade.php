@@ -34,27 +34,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($victimdata as $index =>$victim)
                                         <tr>
-                                            <td>Cell 1</td>
-                                            <td>Cell 2</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 5</td>
-                                            <td>Cell 6</td>
-                                            <td>Cell 6</td>
-                                            <td>Cell 7</td>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$victim->victim_id}}</td>
+                                            <td>{{$victim->victim_fullname}}</td>
+                                            <td>{{$victim->address}}</td>
+                                            <td>{{$victim->city}}</td>
+                                            <td>{{$victim->contact_no}}</td>
+                                            <td>{{$victim->condition}}</td>
+                                            <td>{{$victim->gender}}</td>
+                                            <td>{{$victim->details}}</td>
+                                            
                                         </tr>
-                                        <tr>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 5</td>
-                                            <td>Cell 6</td>
-                                            <td>Cell 6</td>
-                                            <td>Cell 7</td>
-                                        </tr>
-                                    </tbody>
+                                    @endforeach          
                                 </table>
                             </div>
                             <div class="form-group row">

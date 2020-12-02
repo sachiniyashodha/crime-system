@@ -30,18 +30,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($sectionoflowdata as $index =>$section_of_low)
                                         <tr>
-                                            <td>Cell 1</td>
-                                            <td>Cell 2</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$section_of_low->section_id}}</td>
+                                            <td>{{$section_of_low->section_of_low}}</td>
+                                            <td>{{$section_of_low->sentence}}</td>
+                                            <td>{{$section_of_low->detail}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                        </tr>
+                                    @endforeach     
                                     </tbody>
                                 </table>
                             </div>

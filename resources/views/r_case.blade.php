@@ -31,16 +31,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($crimecasedata as $index =>$crime_case)
                                         <tr>
-                                            <td>Cell 1</td>
-                                            <td>Cell 2</td>
-                                            <td>Cell 3</td>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$crime_case->case_id}}</td>
+                                            <td>{{$crime_case->officer_id}}</td>
+                                            <td>{{$crime_case->fir_number}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 3</td>
-                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -58,7 +56,6 @@
         </div>
     </div>
 
-                                            
-
+                                        
          
 @endsection

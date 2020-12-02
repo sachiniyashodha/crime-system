@@ -32,20 +32,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($investigationdata as $index =>$investigation)
                                         <tr>
-                                            <td>Cell 1</td>
-                                            <td>Cell 2</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 5</td>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$investigation->investigation_id}}</td>
+                                            <td>{{$investigation->case_id}}</td>
+                                            <td>{{$investigation->officer_fullname}}</td>
+                                            <td>{{$investigation->date_start}}</td>
+                                            <td>{{$investigation->date_end}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 3</td>
-                                            <td>Cell 4</td>
-                                            <td>Cell 5</td>
-                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
