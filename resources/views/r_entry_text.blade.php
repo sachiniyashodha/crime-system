@@ -33,6 +33,7 @@
                                     <table class="table" data-show-print="true" data-url="json/data1.json">
                                         <thead>
                                             <tr>
+                                                <th>#</th>
                                                 <th>Entry ID</th>
                                                 <th>Reference number</th>
                                                 <th>Branch name</th>
