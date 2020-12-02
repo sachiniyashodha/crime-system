@@ -14,7 +14,8 @@ class CreateAccusedsTable extends Migration
     public function up()
     {
         Schema::create('accuseds', function (Blueprint $table) {
-            $table->increments('accu_id');
+            $table->increments('id');
+            $table->string('accu_id');
             $table->string('accused_fullname');
             $table->string('dob');
             $table->string('address');
