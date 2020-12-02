@@ -48,7 +48,7 @@ class AdminFormController extends Controller
             'gender'       => 'required|string|max:250',
         ]);
 
-        if($add_data != ''){
+        if($add_data->fails()){
             return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations

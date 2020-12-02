@@ -46,7 +46,7 @@ class CaseOutcomesController extends Controller
             'status'              => 'nullable|max:15|string',
         ]);
 
-        if($add_data != ''){
+        if($add_data->fails()){
             return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
