@@ -47,7 +47,7 @@ class SectionOfLowController extends Controller
         ]);
 
         if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'section_id'     => request()->has('section_id'    )? request('section_id'    ) : null,
@@ -57,8 +57,8 @@ class SectionOfLowController extends Controller
 
             ];
             section_of_low::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**

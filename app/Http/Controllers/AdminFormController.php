@@ -37,9 +37,6 @@ class AdminFormController extends Controller
      */
     public function store(Request $request)
     {
-        // $add_data = request()->all();
-        //  dd($add_data);
-
         $add_data = Validator::make(request()->all(),[
             'admin_id'     => 'required',
             'officer_id'   => 'required|string|max:250',
@@ -52,7 +49,7 @@ class AdminFormController extends Controller
         ]);
 
         if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'admin_id'     => request()->has( 'admin_id'    )? request( 'admin_id'    ) : null,
@@ -65,10 +62,8 @@ class AdminFormController extends Controller
                 'gender'       => request()->has( 'gender'      )? request( 'gender'      ) : null
             ];
             admin_form::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-//        return  redirect()->back()->withInput()->withErrors("hello world");
-
-        return redirect('add_admin')->with('success', 'You are successfully');
     }
 
     /**
@@ -115,7 +110,12 @@ class AdminFormController extends Controller
     public function destroy(admin_form $admin_form)
     {
         $id = request('delete_id');
-        admin_form::where('admin_id', $id)->delete();
-        return redirect()->back();
+        if($id != '') {
+            admin_form::where('admin_id', $id)->delete();
+            return redirect()->back()->with('success', 'Successfully Delete');
+        }
+        else{
+            return redirect()->back()->with('error', 'Form Has Been Error');
+        }
     }
 }

@@ -47,7 +47,7 @@ class CaseOutcomesController extends Controller
         ]);
 
         if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'case_outcome_id'   => request()->has('case_outcome_id'  )? request('case_outcome_id'  ) : null,
@@ -57,8 +57,8 @@ class CaseOutcomesController extends Controller
                 'status'            => request()->has('status'           )? request('status'           ) : null,
             ];
             case_outcomes::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**

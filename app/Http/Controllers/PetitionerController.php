@@ -50,10 +50,9 @@ class PetitionerController extends Controller
             'officer_name'      => 'required|string|max:250',
             'date_of_hair'      => 'required|string|max:250',
         ]);
-        
 
         if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'petitioner_id'       => request()->has('petitioner_id'     )? request('petitioner_id'     ) : null,
@@ -70,8 +69,8 @@ class PetitionerController extends Controller
 
             ];
             petitioner::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**
@@ -83,9 +82,7 @@ class PetitionerController extends Controller
     public function show(petitioner $petitioner)
     {
         $petitionerdata = petitioner::all();
-        return view('petitioner', [
-            'petitionerdata' => $petitionerdata,
-        ]);
+        return view('petitioner', ['petitionerdata' => $petitionerdata,]);
     }
 
     /**

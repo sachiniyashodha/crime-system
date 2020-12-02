@@ -51,7 +51,7 @@ class VictimController extends Controller
         ]);
 
         if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'victim_id'       => request()->has('victim_id'   )? request('victim_id'   ) : null,
@@ -66,7 +66,7 @@ class VictimController extends Controller
             ];
             victim::create($toInsert);
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
+        return redirect()->back()->with('success', 'Add successfully!');
     }
 
     /**

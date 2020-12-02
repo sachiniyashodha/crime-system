@@ -33,6 +33,7 @@
                                     <table class="table" data-show-print="true" data-url="json/data1.json">
                                         <thead>
                                             <tr>
+                                                <th>#</th>
                                                 <th>Entry ID</th>
                                                 <th>Reference number</th>
                                                 <th>Branch name</th>
@@ -69,7 +70,7 @@
         </div>
         
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-{{--        <script src="{{ asset('js/bootstrap-table-print.js') }}"></script>--}}
+        {{-- <script src="{{ asset('js/bootstrap-table-print.js') }}"></script>--}}
         <script>
             function printDiv() {
                 window.frames["print_frame"].document.body.innerHTML = document.getElementById("printableTable").innerHTML;

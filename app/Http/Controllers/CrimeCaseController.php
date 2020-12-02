@@ -46,7 +46,7 @@ class CrimeCaseController extends Controller
         ]);
 
         if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'case_id'       => request()->has('case_id'      )? request('case_id'      ) : null,
@@ -54,8 +54,8 @@ class CrimeCaseController extends Controller
                 'fir_number'    => request()->has('fir_number'   )? request('fir_number'   ) : null,
             ];
             crime_case::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**
@@ -67,9 +67,7 @@ class CrimeCaseController extends Controller
     public function show(crime_case $crime_case)
     {
         $crimecasedata = crime_case::all();
-        return view('cases', [
-            'crimecasedata' => $crimecasedata,
-        ]);
+        return view('cases', ['crimecasedata' => $crimecasedata,]);
     }
 
     /**

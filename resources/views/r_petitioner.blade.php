@@ -66,7 +66,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -81,19 +80,5 @@
             });
         });
     </script>
-     <div class="form-group row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-6">
-                   <button type="button" class="btn btn-primary" onclick="delete('delete')">Delete</button>
-                   <button type="button" class="btn btn-primary" onclick="cancel('cancel')">Cancel</button>
-                    
-                    </div>
-                 </div>
-                 </div>
-            
-            </form>
-        </div>
-    </div>
-    </div>
-    </div>
+
 @endsection

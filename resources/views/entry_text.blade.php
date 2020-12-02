@@ -12,7 +12,20 @@
                         <div class="card-body pt-5 ">
                         <form class="form-horizontal custom-form"  method="POST" action="{{ route('entrytext_form') }}">
 
-                        {{ csrf_field() }}
+                            {{ csrf_field() }}
+                            @if (\Session::has('success'))
+                                <div class="alert alert-success" role="alert">
+                                    <ul>
+                                        <li>{!! \Session::get('success') !!}</li>
+                                    </ul>
+                                </div>
+                            @elseif (Session::has('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    <ul>
+                                        <li>{!! \Session::get('error') !!}</li>
+                                    </ul>
+                                </div>
+                            @endif
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group row">
