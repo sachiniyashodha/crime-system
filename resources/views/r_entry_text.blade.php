@@ -70,7 +70,7 @@
         </div>
         
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-{{--        <script src="{{ asset('js/bootstrap-table-print.js') }}"></script>--}}
+        {{-- <script src="{{ asset('js/bootstrap-table-print.js') }}"></script>--}}
         <script>
             function printDiv() {
                 window.frames["print_frame"].document.body.innerHTML = document.getElementById("printableTable").innerHTML;

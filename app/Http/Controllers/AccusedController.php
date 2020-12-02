@@ -49,10 +49,9 @@ class AccusedController extends Controller
             'status'           => 'nullable|max:15|string',
             'number_of_crime'  => 'nullable|max:15|string',
         ]);
-        //  dd($add_data);
 
-        if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+        if($add_data != ''){
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'accused_id'       => request()->has('accused_id'      )? request('accused_id'      ) : null,
@@ -66,8 +65,8 @@ class AccusedController extends Controller
                 'number_of_crime'  => request()->has('number_of_crime' )? request('number_of_crime' ) : null,
             ];
             accused::create($toInsert);
+            return redirect()->back()->withInput()->withErrors("hello world");
         }
-        return redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**

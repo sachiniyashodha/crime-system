@@ -40,18 +40,18 @@ class EntryTextController extends Controller
     public function store(Request $request)
     {
         $add_data = Validator::make(request()->all(),[
-                'entry_id'          => 'required',
-                'reference_no'      => 'required|string|max:250',
-                'branch_name'       => 'required|string|max:250',
-                'date'              => 'required|string|max:250',
-                'time'              => 'nullable|max:15|string',
-                'fir_no'            => 'required|string|max:250',
-                'police_entry'      => 'required|string|max:250',
-                'detail'           => 'required|string|max:250',
+                'entry_id'     => 'required',
+                'reference_no' => 'required|string|max:250',
+                'branch_name'  => 'required|string|max:250',
+                'date'         => 'required|string|max:250',
+                'time'         => 'nullable|max:15|string',
+                'fir_no'       => 'required|string|max:250',
+                'police_entry' => 'required|string|max:250',
+                'detail'       => 'required|string|max:250',
         ]);
 
-        if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+        if($add_data != ''){
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'entry_id'     => request()->has('entry_id'    )? request('entry_id'     ) : null,
@@ -64,10 +64,8 @@ class EntryTextController extends Controller
                 'other_details'=> request()->has('detail'     )? request('detail'      ) : null,
             ];
             entry_text::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return  redirect()->back()->withInput()->withErrors("added successfully!");
-//        $add_data = request()->all();
-//        dd($add_data);
     }
 
     /**
@@ -114,8 +112,12 @@ class EntryTextController extends Controller
     public function destroy()
     {
         $id = request('delete_entry_text_id');
-        entry_text::where('entry_id', $id)->delete();
-
-        return redirect()->back();
+        if($id != '') {
+            entry_text::where('entry_id', $id)->delete();
+            return redirect()->back()->with('success', 'Successfully Delete');
+        }
+        else{
+            return redirect()->back()->with('error', 'Form Has Been Error');
+        }
     }
 }
