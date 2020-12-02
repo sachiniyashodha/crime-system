@@ -16,7 +16,8 @@ class InvestigationController extends Controller
      */
     public function index()
     {
-        //
+        $investigationdata = investigation::all();
+        return view('r_investigation', [ 'investigationdata' => $investigationdata]);
     }
 
     /**

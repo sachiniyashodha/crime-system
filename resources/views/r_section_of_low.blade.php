@@ -40,13 +40,18 @@
                                 <td>Cell 3</td>
                                 <td>Cell 4</td>
                             </tr>
-                            <tr>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                            </tr>
-                        </tbody>
+                            </tbody>
+                        
+                                    @foreach($sectionoflowdata as $index =>$section_of_low)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$section_of_low->section_id}}</td>
+                                            <td>{{$section_of_low->section_of_low}}</td>
+                                            <td>{{$section_of_low->sentence}}</td>
+                                            <td>{{$section_of_low->detail}}</td>
+                                        </tr>
+                                    @endforeach          
+                                </tbody>
                     </table>
                 </div>
                 <div class="form-group"></div>

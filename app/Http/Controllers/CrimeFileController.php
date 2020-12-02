@@ -15,7 +15,8 @@ class CrimeFileController extends Controller
      */
     public function index()
     {
-        //
+        $crimefiledata = crime_file::all();
+        return view('r_fir', [ 'crimefiledata' => $crimefiledata]);
     }
 
     /**

@@ -44,6 +44,7 @@ Route::post('/petitioner/store', 'PetitionerController@store')->name('petitioner
 Route::get('/case_outcome', 'CaseOutcomesController@show');
 Route::post('/case_outcome/store', 'CaseOutcomesController@store')->name('caseoutcome_form');
 
+Route::get('/r_case',  'CrimeCaseController@index');
 Route::get('/cases', 'CrimeCaseController@show');
 Route::post('/cases/store', 'CrimeCaseController@store')->name('crimecase_forms');
 
@@ -63,6 +64,7 @@ Route::get('/entry_text', 'EntryTextController@show');
 Route::post('/entry_text/store', 'EntryTextController@store')->name('entrytext_form');
 
 
+Route::get('/r_fir',  'CrimeFileController@index');
 Route::get('/crime_file', 'CrimeFileController@show');
 Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_forms');
 
@@ -73,27 +75,31 @@ Route::get('/avalability', 'AvalabilityController@show');
 
 
 Route::get('/r_case_outcome', function () {return view('r_case_outcome');});
-Route::get('/r_case', function () { return view('r_case');});
+//Route::get('/r_case', function () { return view('r_case');});
 //Route::get('/r_entry_text', function () { return view('r_entry_text');});
-Route::get('/r_fir', function () {return view('r_fir');});
-Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
-Route::get('/r_victim', function () {return view('r_victim');});
+//Route::get('/r_fir', function () {return view('r_fir');});
+//Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
+//Route::get('/r_victim', function () {return view('r_victim');});
 Route::get('/view_wornted_p', function () {return view('view_wornted_p');});
 Route::get('/view_admin', function () {return view('view_admin');});
 Route::get('/r_police_entry_c', function () {return view('r_police_entry_c');});
+//Route::get('/r_investigation', function () {return view('r_investigation');});
 
 
 Route::get('/r_accused', 'AccusedController@index');
 Route::get('/r_petitioner', 'PetitionerController@index');
 
 
+Route::get('/r_investigation',  'InvestigationController@index');
 Route::get('/investigate', 'InvestigationController@show');
 Route::post('/investigation/store', 'InvestigationController@store')->name('investigation_forms');
 
+Route::get('/r_section_of_low',  'SectionOfLowController@index');
 Route::get('/section_of_low', 'SectionOfLowController@show');
 Route::post('/section_of_low/store', 'SectionOfLowController@store')->name('section_of_low_forms');
 
 
+Route::get('/r_victim', 'VictimController@index');
 Route::get('/victim', 'VictimController@show');
 Route::post('/victim/store', 'VictimController@store')->name('victim_forms');
 

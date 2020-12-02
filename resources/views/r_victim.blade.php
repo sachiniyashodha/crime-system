@@ -47,18 +47,27 @@
                                 <td>Cell 6</td>
                                 <td>Cell 6</td>
                                 <td>Cell 7</td>
+                                <td>Cell 8</td>
                             </tr>
-                            <tr>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 5</td>
-                                <td>Cell 6</td>
-                                <td>Cell 6</td>
-                                <td>Cell 7</td>
-                            </tr>
+                           
                         </tbody>
+                        
+                                    @foreach($victimdata as $index =>$victim)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$victim->victim_id}}</td>
+                                            <td>{{$victim->victim_fullname}}</td>
+                                            <td>{{$victim->address}}</td>
+                                            <td>{{$victim->city}}</td>
+                                            <td>{{$victim->contact_no}}</td>
+                                            <td>{{$victim->condition}}</td>
+                                            <td>{{$victim->gender}}</td>
+                                            <td>{{$victim->details}}</td>
+                                            
+                                        </tr>
+                                    @endforeach          
+                                </tbody>
+
                     </table>
                 </div>
                 <div class="form-group"></div>

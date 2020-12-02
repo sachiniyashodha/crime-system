@@ -17,7 +17,8 @@ class CrimeCaseController extends Controller
      */
     public function index()
     {
-        //
+        $crimecasedata =  crime_case::all();
+        return view('r_case', [ 'crimecasedata' => $crimecasedata]);
     }
 
     /**

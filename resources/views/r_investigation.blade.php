@@ -43,14 +43,18 @@
                                 <td>Cell 4</td>
                                 <td>Cell 5</td>
                             </tr>
-                            <tr>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 5</td>
-                            </tr>
-                        </tbody>
+                            <tbody>
+                                    @foreach($investigationdata as $index =>$investigation)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$investigation->investigation_id}}</td>
+                                            <td>{{$investigation->case_id}}</td>
+                                            <td>{{$investigation->officer_fullname}}</td>
+                                            <td>{{$investigation->date_start}}</td>
+                                            <td>{{$investigation->date_end}}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
                     </table>
                 </div>
                 <div class="form-group"></div>
