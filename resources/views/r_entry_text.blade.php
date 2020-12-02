@@ -44,29 +44,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Cell 1</td>
-                                                <td>Cell 2</td>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                                <td>Cell 5</td>
-                                                <td>Cell 6</td>
-                                                <td>Cell 7</td>
-                                                <td>Cell 8</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                                <td>Cell 5</td>
-                                                <td>Cell 6</td>
-                                                <td>Cell 7</td>
-                                                <td>Cell 8</td>
-                                            </tr>
-                                        </tbody>
-                                        <tbody>
-
                                         @foreach( $entrytextdata as $index => $entrytext)
                                         <tr>
                                             <td>{{ ++$index }}</td>
@@ -79,8 +56,8 @@
                                             <td>{{$entrytext->police_entry}}</td>
                                             <td>{{$entrytext->other_details}}</td>
                                         </tr>
-                                    @endforeach
-                                    </tbody>
+                                        @endforeach
+                                        </tbody>
                                     </table>
                                     <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
                                 </div>

@@ -74,7 +74,7 @@ Route::get('/avalability', 'AvalabilityController@show');
 
 Route::get('/r_case_outcome', function () {return view('r_case_outcome');});
 Route::get('/r_case', function () { return view('r_case');});
-Route::get('/r_entry_text', function () { return view('r_entry_text');});
+//Route::get('/r_entry_text', function () { return view('r_entry_text');});
 Route::get('/r_fir', function () {return view('r_fir');});
 Route::get('/r_section_of_low', function () {return view('r_section_of_low');});
 Route::get('/r_victim', function () {return view('r_victim');});
