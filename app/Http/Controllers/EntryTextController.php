@@ -17,7 +17,8 @@ class EntryTextController extends Controller
      */
     public function index()
     {
-        //
+        $entrytextdata = entry_text::all();
+        return view('r_entry_text', [ 'entrytextdata' => $entrytextdata]);
     }
 
     /**

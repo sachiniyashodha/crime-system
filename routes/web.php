@@ -67,8 +67,11 @@ Route::post('/delete_admin/store', 'delete_adminController@store')->name('delete
 Route::get('/entry_captured', function () {return view('entry_captured');});
 Route::post('/entry_captured/store', 'EntrycapturedController@store')->name('entry_captured_forms');
 
+
+Route::get('/r_entry_text',  'EntryTextController@index');
 Route::get('/entry_text', 'EntryTextController@show');
 Route::post('/entry_text/store', 'EntryTextController@store')->name('entrytext_form');
+
 
 Route::get('/crime_file', 'CrimeFileController@show');
 Route::post('/crime_file/store', 'CrimeFileController@store')->name('crimefile_forms');
@@ -92,6 +95,7 @@ Route::get('/r_police_entry_c', function () {return view('r_police_entry_c');});
 
 Route::get('/r_accused', 'AccusedController@index');
 Route::get('/r_petitioner', 'PetitionerController@index');
+
 
 Route::get('/investigate', 'InvestigationController@show');
 Route::post('/investigation/store', 'InvestigationController@store')->name('investigation_forms');
