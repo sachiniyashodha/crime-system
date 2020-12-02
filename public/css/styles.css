@@ -1,4 +1,37 @@
 
+
+.card-img{
+  background-image: url(../img/1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-title{
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.colour-effect{
+  background-color: #383d4273;
+  box-shadow: 2px 2px 8px black;
+  padding: 40px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bg-color{
+  background: #9dc5c1;
+}
+
+.jumbotron-black {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #383d4273;
+  border-radius: 0.3rem;
+}
+
 .main-image{
   background-image: url(../img/background1.jpg);
   background-position: center;
