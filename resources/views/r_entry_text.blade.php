@@ -33,13 +33,14 @@
                                     <table class="table" data-show-print="true" data-url="json/data1.json">
                                         <thead>
                                             <tr>
+                                                <th>Entry ID</th>
                                                 <th>Reference number</th>
                                                 <th>Branch name</th>
                                                 <th>Date </th>
                                                 <th>Time </th>
-                                                <th>Petitioner id </th>
+                                                <th>Fir No </th>
                                                 <th>Police entry text</th>
-                                                <th>Other details</th>
+                                                <th>details</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -51,6 +52,7 @@
                                                 <td>Cell 5</td>
                                                 <td>Cell 6</td>
                                                 <td>Cell 7</td>
+                                                <td>Cell 8</td>
                                             </tr>
                                             <tr>
                                                 <td>Cell 3</td>
@@ -60,8 +62,25 @@
                                                 <td>Cell 5</td>
                                                 <td>Cell 6</td>
                                                 <td>Cell 7</td>
+                                                <td>Cell 8</td>
                                             </tr>
                                         </tbody>
+                                        <tbody>
+
+                                        @foreach( $entrytextdata as $index => $entrytext)
+                                        <tr>
+                                            <td>{{ ++$index }}</td>
+                                            <td>{{$entrytext->entry_id}}</td>
+                                            <td>{{$entrytext->reference_no}}</td>
+                                            <td>{{$entrytext->branch_name}}</td>
+                                            <td>{{$entrytext->date}}</td>
+                                            <td>{{$entrytext->time}}</td>
+                                            <td>{{$entrytext->fir_id}}</td>
+                                            <td>{{$entrytext->police_entry}}</td>
+                                            <td>{{$entrytext->other_details}}</td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
                                     </table>
                                     <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
                                 </div>
@@ -71,6 +90,7 @@
                 </div>
             </div>
         </div>
+        
         <script src="{{ asset('js/jquery.min.js') }}"></script>
 {{--        <script src="{{ asset('js/bootstrap-table-print.js') }}"></script>--}}
         <script>
