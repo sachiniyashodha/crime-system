@@ -11,6 +11,19 @@
                         <div class="card-body pt-5 ">
                             <form class="form-horizontal custom-form" method="POST" action="{{ route('entry_captured_forms') }}">
                             {{ csrf_field() }}
+                                @if (\Session::has('success'))
+                                    <div class="alert alert-success" role="alert">
+                                        <ul>
+                                            <li>{!! \Session::get('success') !!}</li>
+                                        </ul>
+                                    </div>
+                                @elseif (Session::has('error'))
+                                    <div class="alert alert-danger" role="alert">
+                                        <ul>
+                                            <li>{!! \Session::get('error') !!}</li>
+                                        </ul>
+                                    </div>
+                                @endif
                                 <div class="form-group row">
                                     <div class="col-sm-4 label-column text-right">
                                         <label class="control-label" for="name-input-field">Case ID : </label>

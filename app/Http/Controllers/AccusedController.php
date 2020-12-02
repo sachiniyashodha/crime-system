@@ -65,7 +65,7 @@ class AccusedController extends Controller
                 'number_of_crime'  => request()->has('number_of_crime' )? request('number_of_crime' ) : null,
             ];
             accused::create($toInsert);
-            return redirect()->back()->withInput()->withErrors("hello world");
+            return redirect()->back()->with('success', 'Add successfully!');
         }
     }
 

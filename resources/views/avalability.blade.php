@@ -14,6 +14,19 @@
                         </div>
                         <form class="form-horizontal custom-form" method="GET" action="{{ url('/avalability') }}">
                             {{ csrf_field() }}
+                            @if (\Session::has('success'))
+                                <div class="alert alert-success" role="alert">
+                                    <ul>
+                                        <li>{!! \Session::get('success') !!}</li>
+                                    </ul>
+                                </div>
+                            @elseif (Session::has('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    <ul>
+                                        <li>{!! \Session::get('error') !!}</li>
+                                    </ul>
+                                </div>
+                            @endif
                             <div class="card-body my-4 mx-auto col-sm-12">
                                 <div class="row">
                                     <div class="col-sm-6 label-column">

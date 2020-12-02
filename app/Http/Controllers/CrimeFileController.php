@@ -48,23 +48,23 @@ class CrimeFileController extends Controller
             'status'     => 'required',
         ]);
 
-        if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+        if($add_data != ''){
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
-                'fir_no'            => request()->has('fir_no'       )? request('fir_no'       ) : null,
-                'accused_id'        => request()->has('accused_id'   )? request('accused_id'   ) : null,
-                'victim_id'         => request()->has('victim_id'    )? request('victim_id'    ) : null,
-                'petitioner_id'     => request()->has('petitioner_id')? request('petitioner_id') : null,
-                'place_of_incident' => request()->has('place_of_incident'   )? request('place_of_incident'   ) : null,
-                'date_of_incident'  => request()->has('date_of_incident'      )? request('date_of_incident'      ) : null,
-                'time_of_incident'  => request()->has('time_of_incident'      )? request('time_of_incident'      ) : null,
-                'date_filr'         => request()->has('date_filr'      )? request('date_filr'      ) : null,
-                'accused_status'    => request()->has('status'   )? request('status'   ) : null,
+                'fir_no'            => request()->has('fir_no'            )? request('fir_no'       ) : null,
+                'accused_id'        => request()->has('accused_id'        )? request('accused_id'   ) : null,
+                'victim_id'         => request()->has('victim_id'         )? request('victim_id'    ) : null,
+                'petitioner_id'     => request()->has('petitioner_id'     )? request('petitioner_id') : null,
+                'place_of_incident' => request()->has('place_of_incident' )? request('place_of_incident'   ) : null,
+                'date_of_incident'  => request()->has('date_of_incident'  )? request('date_of_incident'      ) : null,
+                'time_of_incident'  => request()->has('time_of_incident'  )? request('time_of_incident'      ) : null,
+                'date_filr'         => request()->has('date_filr'         )? request('date_filr'      ) : null,
+                'accused_status'    => request()->has('status'            )? request('status'   ) : null,
             ];
             crime_file::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
     /**

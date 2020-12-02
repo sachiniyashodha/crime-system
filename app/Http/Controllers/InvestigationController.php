@@ -45,8 +45,8 @@ class InvestigationController extends Controller
             'date_end'          => 'required|string|max:250',
         ]);
 
-        if($add_data->fails()){
-            $add_data->errors()->add('from', 'ADD');
+        if($add_data != ''){
+            return redirect()->back()->with('error', 'Form Has Been Error');
         }else{
             $toInsert = [  //Todo : Get the Confirmation for validations
                 'investigation_id'    => request()->has('investigation_id'  )? request('investigation_id'  ) : null,
@@ -56,8 +56,8 @@ class InvestigationController extends Controller
                 'date_end'            => request()->has('date_end'          )? request('date_end'          ) : null,
             ];
             investigation::create($toInsert);
+            return redirect()->back()->with('success', 'Add successfully!');
         }
-        return  redirect()->back()->withInput()->withErrors("hello world");
     }
 
 
