@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <div class="bg-color p-5">
+                <div class="bg-color p-2">
                     <h2 class="text-center text-white"> ABOUT US </h2>
                     <hr>
                     <p class="text-white font-weight-bold">Crime management system for Puttalam police district. Initially, it focuses on Puttalam district area police stations to formulate a method for supportingactivities in the police department. The police offices can be used this web-based solution
@@ -43,7 +43,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body bg-color">
-                    <div class="p-5">
+                    <div class="p-2">
                         <h2 class="text-center text-white"> FUNCTIONS</h2>
                         <hr>
                         <h4 class="text-left text-white font-weight-bold">Data Entry in Easy Manner. </h4>
@@ -57,7 +57,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-body bg-color p-5 ">
+                <div class="card-body bg-color p-2 ">
                     <h2 class="text-center text-white"> POLICE NEWS </h2>
                     <div class="text-center">
                         <img class="mx-auto" src="{{ asset('img/criminalimg.png') }}">
