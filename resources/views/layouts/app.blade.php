@@ -290,14 +290,14 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <li class="dropdown open">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
+{{--                                <ul class="dropdown-menu" role="menu">--}}
+{{--                                    <li>--}}
+                                        <a class="btn-primary btn" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
@@ -306,8 +306,8 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline-block;">
                                             {{ csrf_field() }}
                                         </form>
-                                    </li>
-                                </ul>
+{{--                                    </li>--}}
+{{--                                </ul>--}}
                             </li>
                         @endif
                     </ul>
@@ -367,15 +367,15 @@
     </div>
 </div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-{{--<script src="{{ asset('js/jquery.datatables.min.js') }}"></script>--}}
+<script src="{{ asset('js/app.js') }}"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>--}}
+<script src="{{ asset('js/jquery.datatables.min.js') }}"></script>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 <!-- Scripts -->
 
 <script src="{{ asset('js/script.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+
 
 </body>
 
